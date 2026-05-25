@@ -86,6 +86,14 @@ SKIP_TYPE = re.compile(
     re.I,
 )
 
+# Izbaci NE-engleske regije (drugacije trziste, prag je za EN -> lazni pozitivci)
+# i ocijenjene single karte (psa/bgs/cgc + broj karte tipa "#159").
+SKIP_REGION_GRADED = re.compile(
+    r"(\bkorean\b|\bjapanese\b|\bjp\b|\bkr\b|\bcn\b|\bchinese\b|"
+    r"\bpsa\b|\bbgs\b|\bcgc\b|\bace\b\s*\d|#\s*\d)",
+    re.I,
+)
+
 # Shopify shopovi -> koriste /products.json (cisti JSON, najpouzdanije)
 SHOPIFY_SHOPS = [
     ("Magic Omens",  "https://magicomens.com"),
@@ -136,6 +144,8 @@ def match_target(title):
     Tako hvatamo i imenovane setove I sve ostale vrijedne formate."""
     t = norm(title)
     if SKIP_TYPE.search(t):
+        return None
+    if SKIP_REGION_GRADED.search(t):
         return None
     if not WANTED_TYPE.search(t):
         return None
@@ -329,19 +339,19 @@ def run():
             cijena_txt = f"{price:.2f} EUR" if price else "cijena na stranici"
             tag = "🔥 <b>PRIORITET</b>\n" if priority else ""
             drop = "📉 <b>PAD CIJENE!</b>\n" if price_dropped else ""
-            # gruba procjena marze do praga (prag je nas "fer ulaz")
-            marza = ""
-            if price and price < prag:
-                pct = round((prag / price - 1) * 100)
-                if pct >= 10:
-                    marza = f"📈 ~{pct}% ispod fer praga\n"
+            # NAPOMENA: prag je gornja granica "fer ulaza" po TIPU, NE trzisna cijena.
+            # Postotak je znao zavarati pa ga vise ne prikazujemo.
+            # Samo PRIORITET setovi nose pouzdaniju marzu -> njih istaknemo.
+            note = ""
+            if priority and price and price <= prag:
+                note = "✅ vrijedan set — provjeri tržište prije kupnje\n"
             alerts.append(
                 f"🟢 <b>NA STANJU</b>\n"
                 f"{tag}{drop}"
                 f"🏪 {html.escape(shop)}\n"
                 f"📦 {html.escape(title)}\n"
-                f"💶 <b>{cijena_txt}</b> (prag ≤{prag} €)\n"
-                f"{marza}"
+                f"💶 <b>{cijena_txt}</b> (fer ulaz ≤{prag} €)\n"
+                f"{note}"
                 f"🔗 {html.escape(url)}"
             )
 
