@@ -26,8 +26,12 @@ import requests
 
 TG_TOKEN = os.environ.get("TG_TOKEN", "")
 TG_CHAT = os.environ.get("TG_CHAT", "")
+# Opcionalno: ScraperAPI kljuc za zaobilazenje 403 na Shopify shopovima
+# (Magic Omens, Origin). Ako nije postavljen, ti se shopovi preskacu.
+SCRAPER_API_KEY = os.environ.get("SCRAPER_API_KEY", "")
 
 STATE_FILE = "state.json"
+DEALS_FILE = "deals.json"
 USER_AGENT = "Mozilla/5.0 (compatible; zgtcg-restock/1.0)"
 REQUEST_TIMEOUT = 25
 
@@ -188,6 +192,13 @@ MUTED_SHOPS = {
 # 0 = bez limita. Preporuka 3-5.
 MAX_ALERTS_PER_SHOP = 4
 
+# Minimalna procijenjena marza (EUR) da se uopce javi - SAMO za setove gdje
+# znamo trzisni raspon (MARKET_RANGES). Reze tanke dealove.
+# Racuna se: (donja granica raspona) - (cijena na shopu).
+# Setovi BEZ poznatog raspona se NE filtriraju ovim (njih javi normalno).
+# 0 = iskljuceno (javi sve sto prodje prag).
+MIN_MARGIN = 20
+
 
 
 # ----------------------------------------------------------------------------
@@ -270,6 +281,18 @@ def save_state(state):
         json.dump(state, f, ensure_ascii=False, indent=2)
 
 
+def save_deals(deals):
+    """Zapisi cisti popis trenutnih dealova za dashboard (deals.json)."""
+    import datetime
+    payload = {
+        "updated": datetime.datetime.utcnow().isoformat() + "Z",
+        "count": len(deals),
+        "deals": deals,
+    }
+    with open(DEALS_FILE, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+
+
 def send_telegram(text):
     if not TG_TOKEN or not TG_CHAT:
         print("[WARN] TG_TOKEN/TG_CHAT nisu postavljeni - preskacem slanje.")
@@ -293,15 +316,37 @@ def send_telegram(text):
 # 3) SCRAPERI
 # ----------------------------------------------------------------------------
 
+def _proxied(target_url):
+    """Ako je ScraperAPI kljuc postavljen, omotaj URL kroz njihov proxy
+    (rezidencijalni IP -> zaobilazi 403). Inace vrati URL direktno."""
+    if SCRAPER_API_KEY:
+        import urllib.parse
+        return ("https://api.scraperapi.com/?api_key="
+                f"{SCRAPER_API_KEY}&url={urllib.parse.quote(target_url, safe='')}")
+    return target_url
+
+
 def scrape_shopify(name, base):
     """Shopify /products.json -> lista (uid, naslov, cijena, available, url)."""
     out = []
     sess = requests.Session()
-    sess.headers["User-Agent"] = USER_AGENT
+    sess.headers.update({
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                      "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+        "Accept": "application/json,text/plain,*/*",
+        "Accept-Language": "en-US,en;q=0.9",
+    })
     page = 1
+    blocked = False
+    # ScraperAPI je sporiji -> daj mu vise vremena
+    timeout = 70 if SCRAPER_API_KEY else REQUEST_TIMEOUT
     while page <= 10:  # do 2500 proizvoda; vise nego dovoljno
         try:
-            r = sess.get(f"{base}/products.json?limit=250&page={page}", timeout=REQUEST_TIMEOUT)
+            target = f"{base}/products.json?limit=250&page={page}"
+            r = sess.get(_proxied(target), timeout=timeout)
+            if r.status_code == 403:
+                blocked = True
+                break
             if r.status_code != 200:
                 break
             data = r.json().get("products", [])
@@ -325,7 +370,11 @@ def scrape_shopify(name, base):
                 out.append((uid, vtitle, price, available, url))
         page += 1
         time.sleep(1)  # pristojan razmak
-    print(f"[OK] {name} (Shopify): {len(out)} varijanti")
+    if blocked:
+        hint = "" if SCRAPER_API_KEY else " (postavi SCRAPER_API_KEY secret da zaobides)"
+        print(f"[BLOCK] {name} (Shopify): 403 - blokira datacenter IP{hint}. Preskacem.")
+    else:
+        print(f"[OK] {name} (Shopify): {len(out)} varijanti")
     return out
 
 
@@ -388,6 +437,7 @@ def run():
     alerts = []
     seen = set()
     per_shop_count = {}
+    all_deals = []  # svi VALIDNI dealovi na stanju (za dashboard, ne samo novi)
 
     for uid, title, price, available, url in all_items:
         seen.add(uid)
@@ -407,9 +457,26 @@ def run():
         # Okini ako: prelaz iz "ne-hit" u "hit", ILI je vec hit ali cijena PALA
         price_dropped = hit and prev_hit and price and prev_price and price < prev_price
 
+        # NOVI PROIZVOD: prvi put ga uopce vidimo (nema ga u stateu)
+        is_new = uid not in state
+
         # ANTI-SPAM: utisani shop javlja SAMO na pad cijene (ne na "novo na stanju")
         muted = shop in MUTED_SHOPS
         should_alert = hit and ((not prev_hit and not muted) or price_dropped)
+
+        # MIN MARZA: ako znamo raspon i marza je premala -> ne javljaj (osim pada cijene)
+        rng = market_range(title)
+        est_margin = None
+        if rng:
+            try:
+                low = float(re.findall(r"\d+", rng)[0])
+                if price:
+                    est_margin = low - price
+            except Exception:
+                est_margin = None
+        if (should_alert and not price_dropped and MIN_MARGIN
+                and est_margin is not None and est_margin < MIN_MARGIN):
+            should_alert = False
 
         # ANTI-SPAM: kapa po shopu po ciklusu
         if should_alert and MAX_ALERTS_PER_SHOP:
@@ -420,23 +487,17 @@ def run():
             per_shop_count[shop] = per_shop_count.get(shop, 0) + 1
             cijena_txt = f"{price:.2f} EUR" if price else "cijena na stranici"
             tag = "🔥 <b>PRIORITET</b>\n" if priority else ""
+            new_tag = "🆕 <b>NOVO U PONUDI</b>\n" if is_new else ""
             drop = "📉 <b>PAD CIJENE!</b>\n" if price_dropped else ""
             cm = cardmarket_link(title)
-            # provjereni trzisni raspon (ako poznajemo set+tip)
-            rng = market_range(title)
             rng_line = ""
             if rng:
                 rng_line = f"📊 <b>tržište ~{rng}</b> (provjereno)\n"
-                # gruba marza: donja granica raspona - cijena
-                try:
-                    low = float(re.findall(r"\d+", rng)[0])
-                    if price and low > price:
-                        rng_line += f"💰 procjena marže: +{low - price:.0f}€ i više\n"
-                except Exception:
-                    pass
+                if est_margin is not None and est_margin > 0:
+                    rng_line += f"💰 procjena marže: +{est_margin:.0f}€ i više\n"
             alerts.append(
                 f"🟢 <b>NA STANJU</b>\n"
-                f"{tag}{drop}"
+                f"{new_tag}{tag}{drop}"
                 f"🏪 {html.escape(shop)}\n"
                 f"📦 {html.escape(title)}\n"
                 f"💶 <b>{cijena_txt}</b>\n"
@@ -447,6 +508,25 @@ def run():
             )
 
         state[uid] = {"hit": hit, "price": price, "available": available, "title": title}
+
+        # Za dashboard: spremi SVAKI validni deal na stanju (ne samo nove alerte)
+        if hit:
+            all_deals.append({
+                "shop": shop,
+                "title": title,
+                "price": price,
+                "url": url,
+                "cardmarket": cardmarket_link(title),
+                "range": rng or "",
+                "margin": round(est_margin) if est_margin is not None else None,
+                "priority": bool(priority),
+                "is_new": bool(is_new),
+            })
+
+    # Sortiraj dealove po procijenjenoj marzi (najveca prvo), pa po prioritetu
+    all_deals.sort(key=lambda d: (d["margin"] if d["margin"] is not None else -999,
+                                  d["priority"]), reverse=True)
+    save_deals(all_deals)
 
     # Ocisti stavke koje vise ne postoje (da state ne raste beskonacno)
     for uid in list(state.keys()):
