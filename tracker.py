@@ -42,35 +42,41 @@ REQUEST_TIMEOUT = 25
 # Setovi koji su OOP/blue-chip/hype -> vrijede vise, dopusti visi prag.
 # (kljuc lowercase bez dijakritike  ->  prag EUR za taj set)
 HOT_SETS = {
-    # OOP / rastuci (Sword & Shield + rani S&V)
-    "lost origin": 160, "silver tempest": 170, "crown zenith": 110,
-    "obsidian flames": 140, "paradox rift": 140, "paldea evolved": 150,
-    "astral radiance": 160, "brilliant stars": 170, "evolving skies": 320,
-    "fusion strike": 150, "celebrations": 90, "hidden fates": 120,
-    "champions path": 90, "shining fates": 130,
+    # === ENGLESKI sealed. Prag = realna DONJA granica trzista (Cardmarket).
+    # Bot javlja samo ako je cijena <= prag (tj. potencijalno ISPOD trzista).
+    # Brojke su konzervativne; UVIJEK provjeri Cardmarket link u poruci. ===
+    # OOP / rastuci (Sword & Shield + rani S&V) - sealed booster box ako nije naznaceno
+    "lost origin": 150, "silver tempest": 150, "crown zenith": 95,
+    "crow zenith": 95,
+    "obsidian flames": 95, "paradox rift": 110, "paldea evolved": 110,
+    "astral radiance": 150, "brilliant stars": 150, "evolving skies": 280,
+    "fusion strike": 130, "celebrations": 70, "hidden fates": 95,
+    "champions path": 70, "shining fates": 110,
     # S&V blue-chip / shiny / hype
-    "151": 95, "prismatic": 110, "surging sparks": 100, "paldean fates": 75,
-    "destined rivals": 80, "chaos rising": 95, "twilight masquerade": 90,
-    "shrouded fable": 80, "stellar crown": 90, "journey together": 100,
-    "temporal forces": 90,
-    # buduci/novi (uhvati na lansiranju)
-    "pitch black": 100, "anniversary": 110, "mega evolution": 95,
-    "phantasmal flames": 95,
+    "151": 60, "prismatic": 90, "surging sparks": 75, "paldean fates": 55,
+    "destined rivals": 65, "chaos rising": 80, "twilight masquerade": 70,
+    "shrouded fable": 65, "stellar crown": 70, "journey together": 80,
+    "temporal forces": 70,
+    # buduci/novi - oprez, reprint rizik; nizak prag da ne placas hype
+    "pitch black": 80, "anniversary": 90, "perfect order": 65,
+    "phantasmal flames": 75, "mega zygarde": 40, "mega dream": 90,
 }
 
-# Genericki prag po TIPU proizvoda (za SVE sto nije u HOT_SETS).
-# Hvata i setove koje nismo imenovali, ako su povoljni za svoj format.
-# (regex tipa  ->  default prag EUR)
+# Genericki prag po TIPU (za setove KOJE NISMO imenovali = nepoznato/rizicno).
+# Drzimo NISKO jer ne znamo trzisnu cijenu -> javi samo ako je jako jeftino.
 TYPE_THRESHOLDS = [
-    (re.compile(r"ultra.?premium|\bupc\b|super.?premium", re.I), 140),
-    (re.compile(r"booster box|booster display|elite trainer|\betb\b", re.I), 130),
-    (re.compile(r"premium collection|collection box|\bcase\b", re.I), 100),
-    (re.compile(r"booster bundle", re.I), 40),
+    (re.compile(r"ultra.?premium|\bupc\b", re.I), 110),
+    (re.compile(r"super.?premium", re.I), 70),
+    (re.compile(r"booster box|booster display", re.I), 90),
+    (re.compile(r"elite trainer|\betb\b", re.I), 55),
+    (re.compile(r"premium collection|collection box|\bcase\b", re.I), 60),
+    (re.compile(r"booster bundle", re.I), 35),
 ]
 
-# Setovi za "PRIORITET" oznaku u poruci (najsigurniji/najvrjedniji za flip)
+# Setovi za "PRIORITET" oznaku (najsigurniji/najvrjedniji za flip)
 PRIORITY_SETS = ["lost origin", "crown zenith", "151", "prismatic",
-                 "evolving skies", "charizard", "silver tempest"]
+                 "evolving skies", "charizard", "silver tempest",
+                 "astral radiance", "brilliant stars"]
 
 # Tip proizvoda koji uopce promatramo. Sve drugo se ignorira.
 WANTED_TYPE = re.compile(
@@ -82,7 +88,8 @@ WANTED_TYPE = re.compile(
 SKIP_TYPE = re.compile(
     r"(single|sleeve|deck protector|binder|portfolio|playmat|toploader|dice|"
     r"mini tin|poster|pencil|checklane|3-pack|3 pack|sleeved booster|"
-    r"battle deck|toolkit|holiday calendar|build . battle)",
+    r"battle deck|toolkit|holiday calendar|build . battle|"
+    r"gem pack|akrilna zastita|akrilna zastit|acryl|protector|zastita za)",
     re.I,
 )
 
@@ -138,6 +145,17 @@ def norm(s):
     return s
 
 
+def cardmarket_link(title):
+    """Sastavi Cardmarket pretragu za ovaj proizvod (da odmah provjeris pravu cijenu)."""
+    import urllib.parse
+    # ocisti naslov od sifri/viska da pretraga bude tocnija
+    q = re.sub(r"[#].*$", "", title)
+    q = re.sub(r"\b(pokemon|tcg|scarlet|violet|sv\d+|cbb\w*)\b", "", q, flags=re.I)
+    q = re.sub(r"\s+", " ", q).strip()
+    enc = urllib.parse.quote(q)
+    return f"https://www.cardmarket.com/en/Pokemon/Products/Search?searchString={enc}"
+
+
 def match_target(title):
     """Vrati (labela, prag, prioritet) ako je proizvod vrijedan tip.
     Prag = visi od (HOT_SETS bonus za set, genericki prag za tip).
@@ -150,24 +168,24 @@ def match_target(title):
     if not WANTED_TYPE.search(t):
         return None
 
-    # 1) Genericki prag prema TIPU proizvoda
+    # 1) Tip mora biti medu zeljenima (inace ignoriraj)
     type_prag = 0
     for rx, prag in TYPE_THRESHOLDS:
         if rx.search(t):
             type_prag = max(type_prag, prag)
     if type_prag == 0:
-        return None  # tip nije medu zeljenima
+        return None
 
-    # 2) Bonus prag ako je prepoznat HOT set (uzmi visi)
-    set_prag = 0
-    set_name = None
+    # 2) Ako prepoznamo KONKRETAN set -> njegov prag je MJERODAVAN
+    #    (jer za njega znamo pravu trzisnu cijenu). Genericki tip se koristi
+    #    SAMO kad set nije prepoznat (nepoznato = rizicno = nizak prag).
+    set_prag = None
     for key, prag in HOT_SETS.items():
         if key in t:
-            if prag > set_prag:
+            if set_prag is None or prag > set_prag:
                 set_prag = prag
-                set_name = key
 
-    prag = max(type_prag, set_prag)
+    prag = set_prag if set_prag is not None else type_prag
 
     # 3) Labela + prioritet
     label = title.strip()
@@ -339,20 +357,16 @@ def run():
             cijena_txt = f"{price:.2f} EUR" if price else "cijena na stranici"
             tag = "🔥 <b>PRIORITET</b>\n" if priority else ""
             drop = "📉 <b>PAD CIJENE!</b>\n" if price_dropped else ""
-            # NAPOMENA: prag je gornja granica "fer ulaza" po TIPU, NE trzisna cijena.
-            # Postotak je znao zavarati pa ga vise ne prikazujemo.
-            # Samo PRIORITET setovi nose pouzdaniju marzu -> njih istaknemo.
-            note = ""
-            if priority and price and price <= prag:
-                note = "✅ vrijedan set — provjeri tržište prije kupnje\n"
+            cm = cardmarket_link(title)
             alerts.append(
                 f"🟢 <b>NA STANJU</b>\n"
                 f"{tag}{drop}"
                 f"🏪 {html.escape(shop)}\n"
                 f"📦 {html.escape(title)}\n"
-                f"💶 <b>{cijena_txt}</b> (fer ulaz ≤{prag} €)\n"
-                f"{note}"
-                f"🔗 {html.escape(url)}"
+                f"💶 <b>{cijena_txt}</b>\n"
+                f"🛒 <a href=\"{html.escape(url)}\">Kupi na shopu</a>\n"
+                f"📊 <a href=\"{html.escape(cm)}\">Provjeri cijenu na Cardmarketu</a>\n"
+                f"<i>kupi samo ako je shop cijena ispod Cardmarketa</i>"
             )
 
         state[uid] = {"hit": hit, "price": price, "available": available, "title": title}
