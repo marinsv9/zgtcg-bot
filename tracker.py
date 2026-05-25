@@ -102,6 +102,18 @@ WOO_SHOPS = [
     ("Pullz",             "https://pullz.shop"),
 ]
 
+# --- ANTI-SPAM KONTROLE ---
+# Shopovi koje si vec "pocistio" (znas sve dealove) -> NE javljaj nove,
+# osim ako cijena PADNE ispod vec videne. Stavi ime tocno kao gore.
+# Primjer: skini # ispod da utisas Igracke Hrvatska (statican katalog).
+MUTED_SHOPS = {
+    "Igracke Hrvatska",
+}
+# Max broj NOVIH alerta po jednom shopu po ciklusu (da te jedan shop ne preplavi).
+# 0 = bez limita. Preporuka 3-5.
+MAX_ALERTS_PER_SHOP = 4
+
+
 
 # ----------------------------------------------------------------------------
 # 2) POMOCNE FUNKCIJE
@@ -283,6 +295,7 @@ def run():
 
     alerts = []
     seen = set()
+    per_shop_count = {}
 
     for uid, title, price, available, url in all_items:
         seen.add(uid)
@@ -298,12 +311,24 @@ def run():
         prev_hit = prev.get("hit", False)
         prev_price = prev.get("price", 0)
 
+        shop = uid.split(":", 1)[0]
         # Okini ako: prelaz iz "ne-hit" u "hit", ILI je vec hit ali cijena PALA
         price_dropped = hit and prev_hit and price and prev_price and price < prev_price
-        if hit and (not prev_hit or price_dropped):
-            shop = uid.split(":", 1)[0]
+
+        # ANTI-SPAM: utisani shop javlja SAMO na pad cijene (ne na "novo na stanju")
+        muted = shop in MUTED_SHOPS
+        should_alert = hit and ((not prev_hit and not muted) or price_dropped)
+
+        # ANTI-SPAM: kapa po shopu po ciklusu
+        if should_alert and MAX_ALERTS_PER_SHOP:
+            if per_shop_count.get(shop, 0) >= MAX_ALERTS_PER_SHOP:
+                should_alert = False
+
+        if should_alert:
+            per_shop_count[shop] = per_shop_count.get(shop, 0) + 1
             cijena_txt = f"{price:.2f} EUR" if price else "cijena na stranici"
             tag = "🔥 <b>PRIORITET</b>\n" if priority else ""
+            drop = "📉 <b>PAD CIJENE!</b>\n" if price_dropped else ""
             # gruba procjena marze do praga (prag je nas "fer ulaz")
             marza = ""
             if price and price < prag:
@@ -312,7 +337,7 @@ def run():
                     marza = f"📈 ~{pct}% ispod fer praga\n"
             alerts.append(
                 f"🟢 <b>NA STANJU</b>\n"
-                f"{tag}"
+                f"{tag}{drop}"
                 f"🏪 {html.escape(shop)}\n"
                 f"📦 {html.escape(title)}\n"
                 f"💶 <b>{cijena_txt}</b> (prag ≤{prag} €)\n"
