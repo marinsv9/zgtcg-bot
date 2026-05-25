@@ -1,0 +1,45 @@
+name: TCG Restock Check
+
+on:
+  schedule:
+    # Svakih 15 minuta. (GitHub cron je UTC; interval radi neovisno o zoni.)
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}   # gumb za rucno pokretanje u Actions tabu
+
+# Dozvoli workflowu da commita azurirani state.json natrag u repo
+permissions:
+  contents: write
+
+# Sprijeci preklapanje ako jedan ciklus traje duze
+concurrency:
+  group: tcg-restock
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run tracker
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: ${{ secrets.TG_CHAT }}
+        run: python tracker.py
+
+      - name: Persist state
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add state.json || true
+          git commit -m "update state [skip ci]" || echo "nema promjena"
+          git push || echo "nista za push"
