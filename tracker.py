@@ -31,32 +31,60 @@ STATE_FILE = "state.json"
 USER_AGENT = "Mozilla/5.0 (compatible; zgtcg-restock/1.0)"
 REQUEST_TIMEOUT = 25
 
-# Kljucne rijeci -> fer ulazni prag (EUR). Ako je proizvod NA STANJU i
-# cijena <= prag, okida alert. Pragovi = tvoja instant-marza granica.
-# Prazni/spomenuti setovi koji jos nisu izasli (Pitch Black, Anniversary)
-# vec su tu pa cim shop listao proizvod, uhvatis ga.
-TARGETS = [
-    # set kljuc (lowercase, bez dijakritike)        prag EUR   labela
-    ("151",                                          92,       "151"),
-    ("chaos rising",                                 90,       "Chaos Rising"),
-    ("destined rivals",                              72,       "Destined Rivals"),
-    ("prismatic",                                    95,       "Prismatic Evolutions"),
-    ("surging sparks",                               95,       "Surging Sparks"),
-    ("paldean fates",                                65,       "Paldean Fates"),
-    ("pitch black",                                  95,       "Pitch Black Night (NOVO)"),
-    ("anniversary",                                  95,       "30th Anniversary (NOVO)"),
-    ("celebration",                                  95,       "Anniversary/Celebration (NOVO)"),
+# =====================  LOGIKA HVATANJA DEALOVA  =====================
+# Bot vise NE lovi samo imenovane setove. Sada hvata SVAKI vrijedan
+# proizvod (ETB / Box / UPC / Collection) ispod praga za svoj TIP.
+# Tri sloja:
+#   1) HOT_SETS        -> rijetki/OOP/blue-chip setovi: visi prag (vise vrijede)
+#   2) TYPE_THRESHOLDS -> genericki prag po TIPU proizvoda (hvata sve ostalo)
+#   3) PRIORITY_SETS   -> samo za "PRIORITET" oznaku u poruci
+
+# Setovi koji su OOP/blue-chip/hype -> vrijede vise, dopusti visi prag.
+# (kljuc lowercase bez dijakritike  ->  prag EUR za taj set)
+HOT_SETS = {
+    # OOP / rastuci (Sword & Shield + rani S&V)
+    "lost origin": 160, "silver tempest": 170, "crown zenith": 110,
+    "obsidian flames": 140, "paradox rift": 140, "paldea evolved": 150,
+    "astral radiance": 160, "brilliant stars": 170, "evolving skies": 320,
+    "fusion strike": 150, "celebrations": 90, "hidden fates": 120,
+    "champions path": 90, "shining fates": 130,
+    # S&V blue-chip / shiny / hype
+    "151": 95, "prismatic": 110, "surging sparks": 100, "paldean fates": 75,
+    "destined rivals": 80, "chaos rising": 95, "twilight masquerade": 90,
+    "shrouded fable": 80, "stellar crown": 90, "journey together": 100,
+    "temporal forces": 90,
+    # buduci/novi (uhvati na lansiranju)
+    "pitch black": 100, "anniversary": 110, "mega evolution": 95,
+    "phantasmal flames": 95,
+}
+
+# Genericki prag po TIPU proizvoda (za SVE sto nije u HOT_SETS).
+# Hvata i setove koje nismo imenovali, ako su povoljni za svoj format.
+# (regex tipa  ->  default prag EUR)
+TYPE_THRESHOLDS = [
+    (re.compile(r"ultra.?premium|\bupc\b|super.?premium", re.I), 140),
+    (re.compile(r"booster box|booster display|elite trainer|\betb\b", re.I), 130),
+    (re.compile(r"premium collection|collection box|\bcase\b", re.I), 100),
+    (re.compile(r"booster bundle", re.I), 40),
 ]
 
-# Tip proizvoda koji nas zanima (boost margina) -> blokiraj sitnice.
-# Trazimo ETB / Booster Box / Bundle / Collection. Single packove preskoci.
+# Setovi za "PRIORITET" oznaku u poruci (najsigurniji/najvrjedniji za flip)
+PRIORITY_SETS = ["lost origin", "crown zenith", "151", "prismatic",
+                 "evolving skies", "charizard", "silver tempest"]
+
+# Tip proizvoda koji uopce promatramo. Sve drugo se ignorira.
 WANTED_TYPE = re.compile(
-    r"(elite trainer|booster box|booster bundle|booster display|"
-    r"premium collection|super premium|collection box|ultra premium|upc|case)",
+    r"(elite trainer|\betb\b|booster box|booster bundle|booster display|"
+    r"premium collection|super premium|collection box|ultra premium|\bupc\b|\bcase\b)",
     re.I,
 )
-# Eksplicitno izbaci jeftine sitnice koje ne zelimo (smanjuje sum)
-SKIP_TYPE = re.compile(r"(single|sleeve|deck protector|binder|portfolio|playmat|toploader|dice)", re.I)
+# Eksplicitno izbaci sitnice (smanjuje sum).
+SKIP_TYPE = re.compile(
+    r"(single|sleeve|deck protector|binder|portfolio|playmat|toploader|dice|"
+    r"mini tin|poster|pencil|checklane|3-pack|3 pack|sleeved booster|"
+    r"battle deck|toolkit|holiday calendar|build . battle)",
+    re.I,
+)
 
 # Shopify shopovi -> koriste /products.json (cisti JSON, najpouzdanije)
 SHOPIFY_SHOPS = [
@@ -91,16 +119,38 @@ def norm(s):
 
 
 def match_target(title):
-    """Vrati (labela, prag) ako naslov odgovara nekom cilju + zeljenom tipu."""
+    """Vrati (labela, prag, prioritet) ako je proizvod vrijedan tip.
+    Prag = visi od (HOT_SETS bonus za set, genericki prag za tip).
+    Tako hvatamo i imenovane setove I sve ostale vrijedne formate."""
     t = norm(title)
     if SKIP_TYPE.search(t):
         return None
     if not WANTED_TYPE.search(t):
         return None
-    for key, prag, label in TARGETS:
+
+    # 1) Genericki prag prema TIPU proizvoda
+    type_prag = 0
+    for rx, prag in TYPE_THRESHOLDS:
+        if rx.search(t):
+            type_prag = max(type_prag, prag)
+    if type_prag == 0:
+        return None  # tip nije medu zeljenima
+
+    # 2) Bonus prag ako je prepoznat HOT set (uzmi visi)
+    set_prag = 0
+    set_name = None
+    for key, prag in HOT_SETS.items():
         if key in t:
-            return (label, prag)
-    return None
+            if prag > set_prag:
+                set_prag = prag
+                set_name = key
+
+    prag = max(type_prag, set_prag)
+
+    # 3) Labela + prioritet
+    label = title.strip()
+    priority = any(p in t for p in PRIORITY_SETS)
+    return (label, prag, priority)
 
 
 def load_state():
@@ -239,7 +289,7 @@ def run():
         m = match_target(title)
         if not m:
             continue
-        label, prag = m
+        label, prag, priority = m
 
         # "Vrijedi alertati" = na stanju I (cijena<=prag ILI cijena nepoznata=0)
         hit = available and (price == 0 or price <= prag)
@@ -253,11 +303,20 @@ def run():
         if hit and (not prev_hit or price_dropped):
             shop = uid.split(":", 1)[0]
             cijena_txt = f"{price:.2f} EUR" if price else "cijena na stranici"
+            tag = "🔥 <b>PRIORITET</b>\n" if priority else ""
+            # gruba procjena marze do praga (prag je nas "fer ulaz")
+            marza = ""
+            if price and price < prag:
+                pct = round((prag / price - 1) * 100)
+                if pct >= 10:
+                    marza = f"📈 ~{pct}% ispod fer praga\n"
             alerts.append(
-                f"🟢 <b>{html.escape(label)}</b> — NA STANJU\n"
+                f"🟢 <b>NA STANJU</b>\n"
+                f"{tag}"
                 f"🏪 {html.escape(shop)}\n"
                 f"📦 {html.escape(title)}\n"
                 f"💶 <b>{cijena_txt}</b> (prag ≤{prag} €)\n"
+                f"{marza}"
                 f"🔗 {html.escape(url)}"
             )
 
