@@ -78,6 +78,50 @@ PRIORITY_SETS = ["lost origin", "crown zenith", "151", "prismatic",
                  "evolving skies", "charizard", "silver tempest",
                  "astral radiance", "brilliant stars"]
 
+# === PROVJERENI TRZISNI RASPONI (EUR, sealed, EN) ===
+# Rucno provjereno preko Cardmarket/eBay. Format: (set_kljuc, tip) -> "raspon".
+# Tip: "box" = booster box, "etb" = ETB, "upc" = ultra/super premium.
+# Prikazuje se u poruci SAMO ako se i set I tip poklope (inace samo CM link).
+# NAPOMENA: staticno - provjeri svako par mjeseci jer trziste se mijenja.
+MARKET_RANGES = {
+    ("lost origin", "box"):      "180-250 €",
+    ("silver tempest", "box"):   "160-210 €",
+    ("astral radiance", "box"):  "170-220 €",
+    ("brilliant stars", "box"):  "180-230 €",
+    ("evolving skies", "box"):   "300-400 €",
+    ("crown zenith", "etb"):     "125-165 €",
+    ("crow zenith", "etb"):      "125-165 €",
+    ("151", "upc"):              "150-200 €",
+    ("151", "etb"):              "65-90 €",
+    ("151", "box"):              "200-260 €",
+    ("charizard", "upc"):        "250-325 €",   # S&S Charizard UPC
+    ("obsidian flames", "etb"):  "85-95 €",
+    ("obsidian flames", "box"):  "150-190 €",
+    ("paradox rift", "box"):     "130-160 €",
+    ("paldea evolved", "box"):   "120-150 €",
+    ("prismatic", "etb"):        "90-130 €",
+}
+
+def market_range(title):
+    """Vrati provjereni trzisni raspon ako poznajemo set+tip, inace None."""
+    t = norm(title)
+    # odredi tip
+    if re.search(r"ultra.?premium|\bupc\b|super.?premium", t):
+        typ = "upc"
+    elif re.search(r"elite trainer|\betb\b", t):
+        typ = "etb"
+    elif re.search(r"booster box|booster display", t):
+        typ = "box"
+    else:
+        typ = None
+    if not typ:
+        return None
+    for (skey, stype), rng in MARKET_RANGES.items():
+        if stype == typ and skey in t:
+            return rng
+    return None
+
+
 # Tip proizvoda koji uopce promatramo. Sve drugo se ignorira.
 WANTED_TYPE = re.compile(
     r"(elite trainer|\betb\b|booster box|booster bundle|booster display|"
@@ -98,6 +142,22 @@ SKIP_TYPE = re.compile(
 SKIP_REGION_GRADED = re.compile(
     r"(\bkorean\b|\bjapanese\b|\bjp\b|\bkr\b|\bcn\b|\bchinese\b|"
     r"\bpsa\b|\bbgs\b|\bcgc\b|\bace\b\s*\d|#\s*\d)",
+    re.I,
+)
+
+# Izbaci DRUGE TCG igre (Magic Omens i sl. prodaju mijesano) - hocemo SAMO Pokemon.
+SKIP_OTHER_TCG = re.compile(
+    r"(yu-?gi-?oh|yugioh|magic.{0,6}gathering|\bmtg\b|lorcana|one piece|"
+    r"\bop-?\d|digimon|flesh and blood|\bfab\b|weiss|dragon ball|metazoo|"
+    r"star wars|riftbound|gundam|union arena|ultra.?pro|gaming case|"
+    r"dragon shield|gamegenic|ultimate guard)",
+    re.I,
+)
+# Proizvod MORA djelovati kao Pokemon (ime/set/lik). Inace preskoci.
+REQUIRE_POKEMON = re.compile(
+    r"(pokemon|pok\u00e9mon|\bsv\d|scarlet|violet|sword|shield|"
+    r"charizard|pikachu|eevee|mewtwo|booster|elite trainer|\betb\b|"
+    r"premium collection|\bupc\b)",
     re.I,
 )
 
@@ -164,6 +224,10 @@ def match_target(title):
     if SKIP_TYPE.search(t):
         return None
     if SKIP_REGION_GRADED.search(t):
+        return None
+    if SKIP_OTHER_TCG.search(t):      # Yu-Gi-Oh/MTG/One Piece/oprema -> van
+        return None
+    if not REQUIRE_POKEMON.search(t):  # mora djelovati kao Pokemon
         return None
     if not WANTED_TYPE.search(t):
         return None
@@ -358,15 +422,28 @@ def run():
             tag = "🔥 <b>PRIORITET</b>\n" if priority else ""
             drop = "📉 <b>PAD CIJENE!</b>\n" if price_dropped else ""
             cm = cardmarket_link(title)
+            # provjereni trzisni raspon (ako poznajemo set+tip)
+            rng = market_range(title)
+            rng_line = ""
+            if rng:
+                rng_line = f"📊 <b>tržište ~{rng}</b> (provjereno)\n"
+                # gruba marza: donja granica raspona - cijena
+                try:
+                    low = float(re.findall(r"\d+", rng)[0])
+                    if price and low > price:
+                        rng_line += f"💰 procjena marže: +{low - price:.0f}€ i više\n"
+                except Exception:
+                    pass
             alerts.append(
                 f"🟢 <b>NA STANJU</b>\n"
                 f"{tag}{drop}"
                 f"🏪 {html.escape(shop)}\n"
                 f"📦 {html.escape(title)}\n"
                 f"💶 <b>{cijena_txt}</b>\n"
+                f"{rng_line}"
                 f"🛒 <a href=\"{html.escape(url)}\">Kupi na shopu</a>\n"
-                f"📊 <a href=\"{html.escape(cm)}\">Provjeri cijenu na Cardmarketu</a>\n"
-                f"<i>kupi samo ako je shop cijena ispod Cardmarketa</i>"
+                f"📊 <a href=\"{html.escape(cm)}\">Provjeri na Cardmarketu</a>\n"
+                f"<i>{'raspon je orijentacija — potvrdi na Cardmarketu' if rng else 'kupi samo ako je shop cijena ispod Cardmarketa'}</i>"
             )
 
         state[uid] = {"hit": hit, "price": price, "available": available, "title": title}
