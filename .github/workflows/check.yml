@@ -2,8 +2,8 @@ name: TCG Restock Check
 
 on:
   schedule:
-    # Svakih 15 minuta. (GitHub cron je UTC; interval radi neovisno o zoni.)
-    - cron: "*/15 * * * *"
+    # Svakih 10 minuta. (GitHub cron je UTC; znade kasniti 10-30 min na free tieru.)
+    - cron: "*/10 * * * *"
   workflow_dispatch: {}   # gumb za rucno pokretanje u Actions tabu
 
 # Dozvoli workflowu da commita azurirani state.json natrag u repo
@@ -34,12 +34,13 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: ${{ secrets.TG_CHAT }}
+          SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
         run: python tracker.py
 
       - name: Persist state
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add state.json || true
+          git add state.json deals.json || true
           git commit -m "update state [skip ci]" || echo "nema promjena"
           git push || echo "nista za push"
