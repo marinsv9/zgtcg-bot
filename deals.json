@@ -1,0 +1,127 @@
+{
+  "updated": "2026-05-26T00:18:14.362157Z",
+  "count": 11,
+  "deals": [
+    {
+      "shop": "Igracke Hrvatska",
+      "title": "POKEMON Crow Zenith ETB",
+      "price": 59.99,
+      "url": "https://igrackehrvatska.com/product/pokemon-crow-zenith-etb/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Crow%20Zenith%20ETB",
+      "range": "125-165 €",
+      "margin": 65,
+      "priority": false,
+      "is_new": false
+    },
+    {
+      "shop": "Igracke Hrvatska",
+      "title": "POKEMON Lost Origin Booster Box",
+      "price": 124.99,
+      "url": "https://igrackehrvatska.com/product/pokemon-lost-origin-booster-box/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Lost%20Origin%20Booster%20Box",
+      "range": "180-250 €",
+      "margin": 55,
+      "priority": true,
+      "is_new": false
+    },
+    {
+      "shop": "Igracke Hrvatska",
+      "title": "Pokemon Silver Tempest Booster Box",
+      "price": 129.99,
+      "url": "https://igrackehrvatska.com/product/pokemon-silver-tempest-booster-box/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Silver%20Tempest%20Booster%20Box",
+      "range": "160-210 €",
+      "margin": 30,
+      "priority": true,
+      "is_new": false
+    },
+    {
+      "shop": "Igracke Hrvatska",
+      "title": "POKEMON Obsidian Flames ETB",
+      "price": 59.99,
+      "url": "https://igrackehrvatska.com/product/pokemon-obsidian-flames-etb/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Obsidian%20Flames%20ETB",
+      "range": "85-95 €",
+      "margin": 25,
+      "priority": false,
+      "is_new": false
+    },
+    {
+      "shop": "Igracke Hrvatska",
+      "title": "Pokemon 151 Elite Trainer Box",
+      "price": 59.99,
+      "url": "https://igrackehrvatska.com/product/pokemon-151-elite-trainer-box/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=151%20Elite%20Trainer%20Box",
+      "range": "65-90 €",
+      "margin": 5,
+      "priority": true,
+      "is_new": false
+    },
+    {
+      "shop": "Igracke Hrvatska",
+      "title": "Pokemon TCG Charizard ex Premium Collection",
+      "price": 59.99,
+      "url": "https://igrackehrvatska.com/product/pokemon-tcg-charizard-ex-premium-collection/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Charizard%20ex%20Premium%20Collection",
+      "range": "",
+      "margin": null,
+      "priority": true,
+      "is_new": false
+    },
+    {
+      "shop": "Igracke Hrvatska",
+      "title": "Pokemon 151 Booster Bundle",
+      "price": 34.99,
+      "url": "https://igrackehrvatska.com/product/pokemon-151-booster-bundle/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=151%20Booster%20Bundle",
+      "range": "",
+      "margin": null,
+      "priority": true,
+      "is_new": false
+    },
+    {
+      "shop": "Igracke Hrvatska",
+      "title": "Pokemon SV02 Paldea Evolved ETB",
+      "price": 57.99,
+      "url": "https://igrackehrvatska.com/product/pokemon-sv02-paldea-evolved-etb/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Paldea%20Evolved%20ETB",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": false
+    },
+    {
+      "shop": "Pullz",
+      "title": "Pokémon Trick or Trade 2024 Booster Bundle",
+      "price": 32.99,
+      "url": "https://pullz.shop/shop/pokemon-trick-or-trade-2024-booster-bundle/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Pok%C3%A9mon%20Trick%20or%20Trade%202024%20Booster%20Bundle",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": false
+    },
+    {
+      "shop": "Pullz",
+      "title": "Pokemon Iono Bellibolt ex Premium Collection",
+      "price": 51.99,
+      "url": "https://pullz.shop/shop/pokemon-iono-bellibolt-ex-premium-collection/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Iono%20Bellibolt%20ex%20Premium%20Collection",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": false
+    },
+    {
+      "shop": "Pullz",
+      "title": "Pokemon Ogerpon ex Premium Collection",
+      "price": 47.99,
+      "url": "https://pullz.shop/shop/pokemon-ogerpon-ex-premium-collection/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Ogerpon%20ex%20Premium%20Collection",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": false
+    }
+  ]
+}
