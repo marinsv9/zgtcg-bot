@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZGTCG · Deal Terminal</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Archivo:wght@600;800&display=swap');
+
+  :root{
+    --bg:#0a0e0f; --panel:#0f1517; --line:#1c2628; --line2:#243033;
+    --txt:#d6e4e3; --dim:#5f7572; --green:#37e89a; --green-d:#0f3d2c;
+    --amber:#ffb347; --red:#ff5c5c; --cyan:#42d4e0; --hot:#ff7847;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospace;-webkit-font-smoothing:antialiased}
+  body{background-image:radial-gradient(circle at 15% 0%,#10201c 0%,transparent 45%),radial-gradient(circle at 85% 100%,#101a22 0%,transparent 45%);min-height:100vh}
+  .wrap{max-width:1180px;margin:0 auto;padding:22px 16px 60px}
+
+  header{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;border-bottom:1px solid var(--line2);padding-bottom:14px;margin-bottom:18px}
+  .brand{font-family:'Archivo',sans-serif;font-weight:800;font-size:26px;letter-spacing:-.5px}
+  .brand span{color:var(--green)}
+  .brand .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);margin-left:6px;box-shadow:0 0 10px var(--green);animation:pulse 2s infinite}
+  @keyframes pulse{50%{opacity:.35}}
+  .meta{font-size:12px;color:var(--dim);text-align:right;line-height:1.7}
+  .meta b{color:var(--cyan)}
+
+  .bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+  .btn{background:var(--panel);border:1px solid var(--line2);color:var(--dim);padding:7px 13px;border-radius:7px;font:inherit;font-size:12px;cursor:pointer;transition:.15s;user-select:none}
+  .btn:hover{border-color:var(--green);color:var(--txt)}
+  .btn.on{background:var(--green-d);border-color:var(--green);color:var(--green)}
+  .grow{flex:1}
+  .search{background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:7px 12px;border-radius:7px;font:inherit;font-size:12px;min-width:160px}
+  .search:focus{outline:none;border-color:var(--cyan)}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:13px 15px}
+  .stat .n{font-size:24px;font-weight:800;font-family:'Archivo',sans-serif}
+  .stat .l{font-size:10.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.8px;margin-top:2px}
+  .stat.g .n{color:var(--green)} .stat.a .n{color:var(--amber)} .stat.c .n{color:var(--cyan)} .stat.h .n{color:var(--hot)}
+
+  .deals{display:flex;flex-direction:column;gap:9px}
+  .deal{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:6px 14px;transition:.15s;position:relative;overflow:hidden}
+  .deal:hover{border-color:var(--line2);transform:translateX(2px)}
+  .deal.prio{border-left:3px solid var(--hot)}
+  .deal.prio::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,120,71,.06),transparent 30%);pointer-events:none}
+  .d-title{font-weight:500;font-size:14.5px;line-height:1.35}
+  .d-shop{font-size:11.5px;color:var(--dim);margin-top:3px}
+  .tags{display:flex;gap:6px;margin-top:7px;flex-wrap:wrap}
+  .tag{font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;text-transform:uppercase;letter-spacing:.5px}
+  .tag.prio{background:rgba(255,120,71,.15);color:var(--hot)}
+  .tag.new{background:rgba(66,212,224,.13);color:var(--cyan)}
+  .d-right{text-align:right;display:flex;flex-direction:column;justify-content:center;gap:3px}
+  .d-price{font-size:19px;font-weight:800;font-family:'Archivo',sans-serif}
+  .d-range{font-size:11px;color:var(--dim)}
+  .d-margin{font-size:12.5px;font-weight:700;color:var(--green)}
+  .d-margin.none{color:var(--dim);font-weight:400}
+  .d-links{grid-column:1/-1;display:flex;gap:14px;margin-top:9px;padding-top:10px;border-top:1px solid var(--line)}
+  .d-links a{font-size:12px;color:var(--cyan);text-decoration:none}
+  .d-links a:hover{text-decoration:underline}
+  .d-links a.cm{color:var(--amber)}
+
+  .empty{text-align:center;padding:60px 20px;color:var(--dim)}
+  .empty .big{font-size:40px;margin-bottom:10px}
+  .err{background:rgba(255,92,92,.08);border:1px solid var(--red);color:var(--red);padding:14px 16px;border-radius:9px;font-size:13px;line-height:1.6}
+  .err code{background:#1a0e0e;padding:1px 6px;border-radius:4px;color:#ff9}
+  footer{margin-top:30px;text-align:center;font-size:11px;color:var(--dim);line-height:1.8}
+  a.cfg{color:var(--cyan);cursor:pointer}
+  @media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}.deal{grid-template-columns:1fr}.d-right{text-align:left;flex-direction:row;gap:12px;align-items:baseline;margin-top:4px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <div class="brand">ZG<span>TCG</span> · Deal Terminal<span class="dot"></span></div>
+    </div>
+    <div class="meta" id="meta">učitavam…</div>
+  </header>
+
+  <div class="bar">
+    <button class="btn on" data-f="all">SVE</button>
+    <button class="btn" data-f="prio">🔥 PRIORITET</button>
+    <button class="btn" data-f="new">🆕 NOVO</button>
+    <button class="btn" data-f="margin">💰 S MARŽOM</button>
+    <span class="grow"></span>
+    <input class="search" id="q" placeholder="traži set / shop…">
+    <button class="btn" id="refresh">↻ osvježi</button>
+  </div>
+
+  <div class="stats" id="stats"></div>
+  <div id="content"></div>
+
+  <footer>
+    Podaci iz <b>deals.json</b> · bot osvježava svakih ~10 min · klik <span class="cfg" id="editcfg">⚙ postavi repo</span><br>
+    <span id="cfgline" style="color:var(--dim)"></span>
+  </footer>
+</div>
+
+<script>
+// ---- KONFIG: tvoj GitHub repo (raw deals.json) ----
+// Promijeni ako treba. Format: https://raw.githubusercontent.com/<user>/<repo>/<branch>/deals.json
+let CFG = localStorage.getItem('zgtcg_deals_url') ||
+  "https://raw.githubusercontent.com/marinsv9/zgtcg-bot/main/deals.json";
+
+let DEALS=[], FILTER='all', UPDATED=null;
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+
+function fmtAgo(iso){
+  if(!iso) return '—';
+  const d=new Date(iso), now=new Date(), m=Math.round((now-d)/60000);
+  if(m<1) return 'upravo sad'; if(m<60) return m+' min'; 
+  const h=Math.round(m/60); if(h<24) return h+' h'; return Math.round(h/24)+' d';
+}
+
+async function load(){
+  $('#meta').innerHTML='učitavam…';
+  try{
+    const r=await fetch(CFG+'?t='+Date.now());
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const j=await r.json();
+    DEALS=j.deals||[]; UPDATED=j.updated;
+    render();
+  }catch(e){
+    $('#stats').innerHTML='';
+    $('#content').innerHTML=`<div class="err"><b>Ne mogu učitati deals.json</b><br>
+      ${e.message}. Provjeri da je repo javan ILI da je putanja točna.<br><br>
+      Trenutna putanja:<br><code>${CFG}</code><br><br>
+      Klikni <b>⚙ postavi repo</b> dolje da je promijeniš. Ako je repo privatan,
+      deals.json se ne može čitati ovako — vidi upute.</div>`;
+    $('#meta').innerHTML='<b style="color:var(--red)">greška</b>';
+  }
+}
+
+function render(){
+  let d=[...DEALS];
+  const q=$('#q').value.trim().toLowerCase();
+  if(FILTER==='prio') d=d.filter(x=>x.priority);
+  if(FILTER==='new') d=d.filter(x=>x.is_new);
+  if(FILTER==='margin') d=d.filter(x=>x.margin!=null && x.margin>0);
+  if(q) d=d.filter(x=>(x.title+' '+x.shop).toLowerCase().includes(q));
+
+  // stats (na punom setu)
+  const prio=DEALS.filter(x=>x.priority).length;
+  const nw=DEALS.filter(x=>x.is_new).length;
+  const withM=DEALS.filter(x=>x.margin!=null&&x.margin>0);
+  const totalM=withM.reduce((s,x)=>s+x.margin,0);
+  $('#stats').innerHTML=`
+    <div class="stat g"><div class="n">${DEALS.length}</div><div class="l">dealova na stanju</div></div>
+    <div class="stat h"><div class="n">${prio}</div><div class="l">prioritet</div></div>
+    <div class="stat c"><div class="n">${nw}</div><div class="l">novo u ponudi</div></div>
+    <div class="stat a"><div class="n">+${totalM}€</div><div class="l">zbroj procj. marži</div></div>`;
+
+  $('#meta').innerHTML=`osvježeno prije <b>${fmtAgo(UPDATED)}</b><br>${DEALS.length} dealova · ${d.length} prikazano`;
+
+  if(!d.length){
+    $('#content').innerHTML=`<div class="empty"><div class="big">∅</div>
+      ${DEALS.length? 'Nema dealova za ovaj filter.' : 'Trenutno nema dealova na stanju.<br>Bot će napuniti listu kad nešto nađe.'}</div>`;
+    return;
+  }
+
+  $('#content').innerHTML='<div class="deals">'+d.map(x=>{
+    const prio=x.priority?'<span class="tag prio">🔥 prioritet</span>':'';
+    const nw=x.is_new?'<span class="tag new">🆕 novo</span>':'';
+    const tags=(prio||nw)?`<div class="tags">${prio}${nw}</div>`:'';
+    const price=x.price? x.price.toFixed(2)+' €':'—';
+    const range=x.range? `<div class="d-range">tržište ~${x.range}</div>`:'';
+    const margin=(x.margin!=null&&x.margin>0)
+      ? `<div class="d-margin">+${x.margin}€ marža</div>`
+      : `<div class="d-margin none">provjeri CM</div>`;
+    return `<div class="deal ${x.priority?'prio':''}">
+      <div>
+        <div class="d-title">${esc(x.title)}</div>
+        <div class="d-shop">🏪 ${esc(x.shop)}</div>
+        ${tags}
+      </div>
+      <div class="d-right">
+        <div class="d-price">${price}</div>
+        ${range}${margin}
+      </div>
+      <div class="d-links">
+        <a href="${esc(x.url)}" target="_blank">🛒 Kupi na shopu</a>
+        <a class="cm" href="${esc(x.cardmarket)}" target="_blank">📊 Cardmarket</a>
+      </div>
+    </div>`;
+  }).join('')+'</div>';
+}
+
+function esc(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+
+$$('.btn[data-f]').forEach(b=>b.onclick=()=>{
+  $$('.btn[data-f]').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on'); FILTER=b.dataset.f; render();
+});
+$('#q').oninput=render;
+$('#refresh').onclick=load;
+$('#editcfg').onclick=()=>{
+  const v=prompt('Zalijepi RAW URL do deals.json:\n(GitHub → deals.json → Raw → kopiraj URL)',CFG);
+  if(v){CFG=v.trim();localStorage.setItem('zgtcg_deals_url',CFG);load();}
+};
+$('#cfgline').textContent=CFG;
+
+load();
+setInterval(load, 5*60*1000); // auto-refresh svakih 5 min
+</script>
+</body>
+</html>
