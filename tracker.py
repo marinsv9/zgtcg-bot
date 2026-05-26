@@ -177,7 +177,6 @@ SHOPIFY_SHOPS = [
 WOO_SHOPS = [
     ("PokeBros",          "https://pokebros.com.hr"),
     ("Dabas",             "https://dabas.hr"),
-    ("Igracke Hrvatska",  "https://igrackehrvatska.com"),
     ("Carta Magica",      "https://cartamagica.hr"),
     ("Pullz",             "https://pullz.shop"),
     # --- novi, dodani naslijepo: bot pokusa Woo API, preskoci ako ne radi ---
@@ -187,12 +186,9 @@ WOO_SHOPS = [
 ]
 
 # --- ANTI-SPAM KONTROLE ---
-# Shopovi koje si vec "pocistio" (znas sve dealove) -> NE javljaj nove,
-# osim ako cijena PADNE ispod vec videne. Stavi ime tocno kao gore.
-# Primjer: skini # ispod da utisas Igracke Hrvatska (statican katalog).
-MUTED_SHOPS = {
-    "Igracke Hrvatska",
-}
+# Shopovi koje zelis utisati (NE javljaj nove, samo pad cijene). Dodaj ime
+# tocno kao u listama gore, npr. "Pullz". Prazno = nijedan utisan.
+MUTED_SHOPS = set()
 # Max broj NOVIH alerta po jednom shopu po ciklusu (da te jedan shop ne preplavi).
 # 0 = bez limita. Preporuka 3-5.
 MAX_ALERTS_PER_SHOP = 4
