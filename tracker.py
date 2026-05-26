@@ -169,6 +169,7 @@ REQUIRE_POKEMON = re.compile(
 SHOPIFY_SHOPS = [
     ("Magic Omens",  "https://magicomens.com"),
     ("Origin Cards", "https://origin-cards.com"),
+    ("PokePower",    "https://poke-power.eu"),
 ]
 
 # WooCommerce shopovi -> probaj Store API (/wp-json/wc/store/v1/products).
@@ -179,6 +180,10 @@ WOO_SHOPS = [
     ("Igracke Hrvatska",  "https://igrackehrvatska.com"),
     ("Carta Magica",      "https://cartamagica.hr"),
     ("Pullz",             "https://pullz.shop"),
+    # --- novi, dodani naslijepo: bot pokusa Woo API, preskoci ako ne radi ---
+    ("PokeDeals",         "https://pokedeals.eu"),
+    ("Svarog",            "https://svarogsden.com"),
+    ("SophosLab",         "https://www.sophoslab.hr"),  # vjerojatno custom -> mozda preskoci
 ]
 
 # --- ANTI-SPAM KONTROLE ---
@@ -380,12 +385,18 @@ def scrape_shopify(name, base):
 
 def scrape_woocommerce(name, base):
     """WooCommerce Store API -> lista (uid, naslov, cijena, available, url).
-    Tiho preskace ako API ne postoji."""
+    Tiho preskace ako API ne postoji ili shop blokira (403)."""
     out = []
     sess = requests.Session()
-    sess.headers["User-Agent"] = USER_AGENT
+    sess.headers.update({
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                      "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+        "Accept": "application/json,text/plain,*/*",
+        "Accept-Language": "en-US,en;q=0.9",
+    })
     page = 1
     found_api = False
+    blocked = False
     while page <= 10:
         try:
             r = sess.get(
@@ -393,6 +404,9 @@ def scrape_woocommerce(name, base):
                 params={"per_page": 100, "page": page, "search": "pokemon"},
                 timeout=REQUEST_TIMEOUT,
             )
+            if r.status_code == 403:
+                blocked = True
+                break
             if r.status_code != 200:
                 break
             data = r.json()
@@ -416,7 +430,12 @@ def scrape_woocommerce(name, base):
             out.append((uid, title, price, available, url))
         page += 1
         time.sleep(1)
-    status = f"{len(out)} proizvoda" if found_api else "Store API nedostupan (preskacem)"
+    if blocked:
+        status = "403 - blokira IP ili nije Woo (preskacem)"
+    elif found_api:
+        status = f"{len(out)} proizvoda"
+    else:
+        status = "Store API nedostupan (preskacem)"
     print(f"[{'OK' if found_api else 'SKIP'}] {name} (Woo): {status}")
     return out
 
@@ -429,8 +448,32 @@ def run():
     state = load_state()
     all_items = []
 
-    for name, base in SHOPIFY_SHOPS:
-        all_items += scrape_shopify(name, base)
+    # Shopify shopovi (Magic Omens, Origin) idu preko placenog proxyja (ScraperAPI,
+    # free plan = 1000 kredita/mj). Da ne trosimo kredite -> skeniraj ih SAMO 1x dnevno.
+    # Zadnje vrijeme cuvamo u state pod posebnim kljucem "_shopify_last".
+    import datetime
+    now = datetime.datetime.utcnow()
+    last_raw = state.get("_shopify_last", "")
+    do_shopify = True
+    if last_raw:
+        try:
+            last = datetime.datetime.fromisoformat(last_raw)
+            if (now - last).total_seconds() < 20 * 3600:  # <20h -> preskoci
+                do_shopify = False
+        except Exception:
+            do_shopify = True
+
+    if do_shopify and SHOPIFY_SHOPS:
+        if SCRAPER_API_KEY:
+            for name, base in SHOPIFY_SHOPS:
+                all_items += scrape_shopify(name, base)
+            state["_shopify_last"] = now.isoformat()
+            print("[INFO] Shopify shopovi skenirani (dnevni ciklus).")
+        else:
+            print("[INFO] Shopify preskocen - nema SCRAPER_API_KEY.")
+    else:
+        print("[INFO] Shopify preskocen - vec skeniran u zadnja 24h.")
+
     for name, base in WOO_SHOPS:
         all_items += scrape_woocommerce(name, base)
 
@@ -528,10 +571,19 @@ def run():
                                   d["priority"]), reverse=True)
     save_deals(all_deals)
 
-    # Ocisti stavke koje vise ne postoje (da state ne raste beskonacno)
+    # Ocisti stavke koje vise ne postoje (da state ne raste beskonacno).
+    # Cuvaj: meta kljuceve (pocinju s "_") i Shopify proizvode kad ih NISMO
+    # skenirali ovaj ciklus (inace bi se brisali pa stalno javljali kao novi).
+    shopify_names = {n for n, _ in SHOPIFY_SHOPS}
     for uid in list(state.keys()):
-        if uid not in seen:
-            del state[uid]
+        if uid.startswith("_"):
+            continue
+        if uid in seen:
+            continue
+        # ako je Shopify proizvod a Shopify nismo skenirali -> zadrzi
+        if not do_shopify and uid.split(":", 1)[0] in shopify_names:
+            continue
+        del state[uid]
 
     save_state(state)
 
