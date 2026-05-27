@@ -2111,13 +2111,7 @@
     "available": false,
     "title": "Flesh and Blood Dynasty Booster Box (24 packs)"
   },
-  "Magic Omens:7841486668021:43204716953845": {
-    "hit": false,
-    "price": 160.0,
-    "available": false,
-    "title": "Pokemon TCG Lost Origin (LOR) Booster Box (36 packs)"
-  },
-  "_shopify_last": "2026-05-26T23:44:10.137363",
+  "_shopify_last": "2026-05-27T20:33:45.488048",
   "PokePower:10010928677193:53620427358537": {
     "hit": false,
     "price": 1020.0,
@@ -2753,5 +2747,11 @@
     "price": 40.99,
     "available": true,
     "title": "Pokemon Pikachu V-UNION Card Frame Collection Box"
+  },
+  "Magic Omens:15780120232268:57639127122252": {
+    "hit": false,
+    "price": 144.0,
+    "available": true,
+    "title": "Naruto Mythos TCG: Konoha Shido - Booster Box"
   }
 }
