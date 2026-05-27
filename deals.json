@@ -1,7 +1,18 @@
 {
-  "updated": "2026-05-27T12:34:45.044824Z",
-  "count": 3,
+  "updated": "2026-05-27T17:36:21.070751Z",
+  "count": 4,
   "deals": [
+    {
+      "shop": "Pullz",
+      "title": "Pokemon Pikachu V-UNION Card Frame Collection Box",
+      "price": 40.99,
+      "url": "https://pullz.shop/shop/pokemon-pikachu-v-union-card-frame-collection-box/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Pikachu%20V-UNION%20Card%20Frame%20Collection%20Box",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": true
+    },
     {
       "shop": "Pullz",
       "title": "Pokémon Trick or Trade 2024 Booster Bundle",
