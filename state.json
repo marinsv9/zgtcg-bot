@@ -1793,13 +1793,7 @@
     "available": false,
     "title": "D&D: Campaign Case - Creatures"
   },
-  "Magic Omens:7862500393205:43274559619317": {
-    "hit": false,
-    "price": 60.0,
-    "available": false,
-    "title": "Pokemon TCG Pokemon Go (PoGo) Premium Collection Radiant Eevee"
-  },
-  "_shopify_last": "2026-06-10T21:27:43.041177",
+  "_shopify_last": "2026-06-11T21:29:53.142181",
   "PokePower:10010928677193:53620427358537": {
     "hit": false,
     "price": 1020.0,
@@ -2433,7 +2427,7 @@
   "Magic Omens:15780120232268:57639127122252": {
     "hit": false,
     "price": 144.0,
-    "available": true,
+    "available": false,
     "title": "Naruto Mythos TCG: Konoha Shido - Booster Box"
   },
   "Dabas:79110": {
@@ -2663,5 +2657,35 @@
     "price": 139.99,
     "available": false,
     "title": "Pokemon Terapagos ex Ultra Premium Collection"
+  },
+  "Magic Omens:15810357002572:57768126972236": {
+    "hit": true,
+    "price": 30.0,
+    "available": true,
+    "title": "DAKA: Croatia 2026 Top Audience - Booster Box"
+  },
+  "Dabas:76928": {
+    "hit": false,
+    "price": 89.95,
+    "available": false,
+    "title": "Pokemon Mega Evolution Lucario Elite Trainer Box"
+  },
+  "Dabas:26114": {
+    "hit": false,
+    "price": 129.95,
+    "available": false,
+    "title": "Pokemon Sword &amp; Shield Charizard Ultra Premium Collection"
+  },
+  "Dabas:21887": {
+    "hit": false,
+    "price": 149.95,
+    "available": false,
+    "title": "Pokemon 151 Ultra Premium Collection"
+  },
+  "Dabas:21602": {
+    "hit": false,
+    "price": 54.95,
+    "available": false,
+    "title": "Pokemon 151 Elite Trainer Box"
   }
 }
