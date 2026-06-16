@@ -1,13 +1,13 @@
 {
-  "updated": "2026-06-15T23:22:03.742465Z",
+  "updated": "2026-06-16T18:18:34.471417Z",
   "count": 5,
   "deals": [
     {
-      "shop": "PokeBros",
-      "title": "Pokémon TCG: Mega Venusaur ex Premium Collection",
-      "price": 49.0,
-      "url": "https://pokebros.com.hr/product/pokemon-tcg-mega-venusaur-ex-premium-collection/",
-      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Pok%C3%A9mon%20%3A%20Mega%20Venusaur%20ex%20Premium%20Collection",
+      "shop": "Magic Omens",
+      "title": "DAKA: Croatia 2026 Top Audience - Booster Box",
+      "price": 30.0,
+      "url": "https://magicomens.com/products/daka-croatia-national-team-top-audience-2026",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=DAKA%3A%20Croatia%202026%20Top%20Audience%20-%20Booster%20Box",
       "range": "",
       "margin": null,
       "priority": false,
@@ -22,7 +22,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "shop": "Pullz",
@@ -33,7 +33,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "shop": "Pullz",
@@ -44,7 +44,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "shop": "Pullz",
@@ -55,7 +55,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     }
   ]
 }

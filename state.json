@@ -60,9 +60,9 @@
     "title": "Pokémon TCG: Phantasmal Flames Booster Bundle"
   },
   "PokeBros:13552": {
-    "hit": true,
+    "hit": false,
     "price": 49.0,
-    "available": true,
+    "available": false,
     "title": "Pokémon TCG: Mega Venusaur ex Premium Collection"
   },
   "PokeBros:13389": {
@@ -1793,7 +1793,7 @@
     "available": false,
     "title": "D&D: Campaign Case - Creatures"
   },
-  "_shopify_last": "2026-06-15T16:26:13.209593",
+  "_shopify_last": "2026-06-16T18:15:15.636999",
   "PokePower:10010928677193:53620427358537": {
     "hit": false,
     "price": 1020.0,
@@ -2657,5 +2657,35 @@
     "price": 139.99,
     "available": false,
     "title": "Pokemon Terapagos ex Ultra Premium Collection"
+  },
+  "Dabas:79110": {
+    "hit": false,
+    "price": 249.95,
+    "available": true,
+    "title": "Pokemon Mega Charizard X ex Ultra Premium Collection"
+  },
+  "Dabas:76928": {
+    "hit": false,
+    "price": 89.95,
+    "available": false,
+    "title": "Pokemon Mega Evolution Lucario Elite Trainer Box"
+  },
+  "Dabas:26114": {
+    "hit": false,
+    "price": 129.95,
+    "available": false,
+    "title": "Pokemon Sword &amp; Shield Charizard Ultra Premium Collection"
+  },
+  "Dabas:21887": {
+    "hit": false,
+    "price": 149.95,
+    "available": false,
+    "title": "Pokemon 151 Ultra Premium Collection"
+  },
+  "Dabas:21602": {
+    "hit": false,
+    "price": 54.95,
+    "available": false,
+    "title": "Pokemon 151 Elite Trainer Box"
   }
 }
