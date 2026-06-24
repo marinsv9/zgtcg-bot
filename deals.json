@@ -1,50 +1,5 @@
 {
-  "updated": "2026-06-24T20:56:50.108412Z",
-  "count": 4,
-  "deals": [
-    {
-      "shop": "Pullz",
-      "title": "Pokemon Pikachu V-UNION Card Frame Collection Box",
-      "price": 40.99,
-      "url": "https://pullz.shop/shop/pokemon-pikachu-v-union-card-frame-collection-box/",
-      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Pikachu%20V-UNION%20Card%20Frame%20Collection%20Box",
-      "range": "",
-      "margin": null,
-      "priority": false,
-      "is_new": false
-    },
-    {
-      "shop": "Pullz",
-      "title": "Pokémon Trick or Trade 2024 Booster Bundle",
-      "price": 32.99,
-      "url": "https://pullz.shop/shop/pokemon-trick-or-trade-2024-booster-bundle/",
-      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Pok%C3%A9mon%20Trick%20or%20Trade%202024%20Booster%20Bundle",
-      "range": "",
-      "margin": null,
-      "priority": false,
-      "is_new": false
-    },
-    {
-      "shop": "Pullz",
-      "title": "Pokemon Iono Bellibolt ex Premium Collection",
-      "price": 51.99,
-      "url": "https://pullz.shop/shop/pokemon-iono-bellibolt-ex-premium-collection/",
-      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Iono%20Bellibolt%20ex%20Premium%20Collection",
-      "range": "",
-      "margin": null,
-      "priority": false,
-      "is_new": false
-    },
-    {
-      "shop": "Pullz",
-      "title": "Pokemon Ogerpon ex Premium Collection",
-      "price": 47.99,
-      "url": "https://pullz.shop/shop/pokemon-ogerpon-ex-premium-collection/",
-      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Ogerpon%20ex%20Premium%20Collection",
-      "range": "",
-      "margin": null,
-      "priority": false,
-      "is_new": false
-    }
-  ]
+  "updated": "2026-06-24T22:23:15.682851Z",
+  "count": 0,
+  "deals": []
 }
