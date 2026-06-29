@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-28T23:55:15.931948Z",
+  "updated": "2026-06-29T04:25:02.572287Z",
   "count": 4,
   "deals": [
     {
@@ -11,7 +11,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "shop": "Pullz",
@@ -22,7 +22,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "shop": "Pullz",
@@ -33,7 +33,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "shop": "Pullz",
@@ -44,7 +44,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     }
   ]
 }
