@@ -2409,7 +2409,7 @@
   "PokeBros:12555": {
     "hit": false,
     "price": 75.0,
-    "available": true,
+    "available": false,
     "title": "Pokémon TCG: White Flare Booster Bundle"
   },
   "PokeBros:12548": {
