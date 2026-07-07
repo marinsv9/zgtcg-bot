@@ -1667,13 +1667,7 @@
     "available": false,
     "title": "MTG The Brothers War Set Booster Box (30 packs)"
   },
-  "Magic Omens:7869871227125:43295949127925": {
-    "hit": false,
-    "price": 123.0,
-    "available": false,
-    "title": "MTG The Brothers War Draft Booster Box (36 packs)"
-  },
-  "_shopify_last": "2026-07-06T19:19:40.168477",
+  "_shopify_last": "2026-07-07T17:28:45.290258",
   "PokePower:10010928677193:53620427358537": {
     "hit": false,
     "price": 1020.0,
@@ -2687,5 +2681,11 @@
     "price": 56.99,
     "available": true,
     "title": "Pokemon Mega Zygarde ex Premium Collection"
+  },
+  "Magic Omens:15782027133260:57651291619660": {
+    "hit": false,
+    "price": 90.0,
+    "available": false,
+    "title": "Pokemon TCG: Perfect Order - Elite Trainer Box (ETB)"
   }
 }
