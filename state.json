@@ -2312,8 +2312,8 @@
   },
   "PokeBros:15854": {
     "hit": false,
-    "price": 55.0,
-    "available": false,
+    "price": 60.0,
+    "available": true,
     "title": "Pokémon TCG: Mega Zygarde ex Premium Collection"
   },
   "PokeBros:15611": {
