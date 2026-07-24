@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-24T16:04:25.563066Z",
-  "count": 5,
+  "updated": "2026-07-24T17:50:48.741836Z",
+  "count": 4,
   "deals": [
     {
       "shop": "Pullz",
@@ -41,17 +41,6 @@
       "price": 51.99,
       "url": "https://pullz.shop/shop/pokemon-iono-bellibolt-ex-premium-collection/",
       "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Iono%20Bellibolt%20ex%20Premium%20Collection",
-      "range": "",
-      "margin": null,
-      "priority": false,
-      "is_new": false
-    },
-    {
-      "shop": "Pullz",
-      "title": "Pokemon Ogerpon ex Premium Collection",
-      "price": 47.99,
-      "url": "https://pullz.shop/shop/pokemon-ogerpon-ex-premium-collection/",
-      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Ogerpon%20ex%20Premium%20Collection",
       "range": "",
       "margin": null,
       "priority": false,
