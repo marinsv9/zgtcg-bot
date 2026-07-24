@@ -1877,5 +1877,35 @@
     "price": 55.99,
     "available": false,
     "title": "Pokemon Astral Radiance Elite Trainer Box"
+  },
+  "Pullz:32400": {
+    "hit": false,
+    "price": 55.99,
+    "available": false,
+    "title": "Pokemon Stellar Crown Elite Trainer Box"
+  },
+  "Pullz:32395": {
+    "hit": true,
+    "price": 47.99,
+    "available": true,
+    "title": "Pokemon Ogerpon ex Premium Collection"
+  },
+  "Pullz:32384": {
+    "hit": false,
+    "price": 56.99,
+    "available": false,
+    "title": "Pokemon Scarlet &amp; Violet Koraidon Elite Trainer Box"
+  },
+  "Pullz:32383": {
+    "hit": false,
+    "price": 56.99,
+    "available": false,
+    "title": "Pokemon Scarlet &amp; Violet Miraidon Elite Trainer Box"
+  },
+  "Pullz:32378": {
+    "hit": false,
+    "price": 79.99,
+    "available": false,
+    "title": "Pokemon Charizard ex Super Premium Collection"
   }
 }
