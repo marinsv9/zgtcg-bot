@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-24T21:49:35.385544Z",
+  "updated": "2026-07-24T22:48:04.161378Z",
   "count": 5,
   "deals": [
     {
@@ -55,7 +55,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     }
   ]
 }
