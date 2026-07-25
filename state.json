@@ -990,238 +990,124 @@
     "available": false,
     "title": "Pokémon TCG: Stellar Crown Elite Trainer Box (ETB)"
   },
-  "Dabas:79110": {
+  "PokeBros:16761": {
     "hit": false,
-    "price": 249.95,
-    "available": true,
-    "title": "Pokemon Mega Charizard X ex Ultra Premium Collection"
-  },
-  "Dabas:76928": {
-    "hit": false,
-    "price": 89.95,
+    "price": 140.0,
     "available": false,
-    "title": "Pokemon Mega Evolution Lucario Elite Trainer Box"
+    "title": "Pokémon TCG: 30th Celebration Ditto Premium Collection"
   },
-  "Dabas:26114": {
+  "PokeBros:15936": {
     "hit": false,
-    "price": 129.95,
+    "price": 50.0,
     "available": false,
-    "title": "Pokemon Sword &amp; Shield Charizard Ultra Premium Collection"
+    "title": "Pokémon TCG: Pitch Black Booster Bundle"
   },
-  "Dabas:21887": {
+  "PokeBros:15860": {
     "hit": false,
-    "price": 149.95,
+    "price": 55.0,
     "available": false,
-    "title": "Pokemon 151 Ultra Premium Collection"
+    "title": "Pokémon TCG: Mega Greninja ex Premium Collection"
   },
-  "Dabas:21602": {
+  "PokeBros:15854": {
     "hit": false,
-    "price": 54.95,
+    "price": 60.0,
     "available": false,
-    "title": "Pokemon 151 Elite Trainer Box"
+    "title": "Pokémon TCG: Mega Zygarde ex Premium Collection"
   },
-  "Carta Magica:15231": {
+  "PokeBros:15611": {
     "hit": false,
-    "price": 59.99,
+    "price": 350.0,
     "available": false,
-    "title": "POKEMON PALDEAN FATES ELITE TRAINER BOX"
+    "title": "Pokémon TCG: Ascended Heroes Deluxe Pin Collection Sealed Case (6x)"
   },
-  "Carta Magica:15346": {
+  "PokeBros:15271": {
     "hit": false,
-    "price": 59.99,
+    "price": 50.0,
     "available": false,
-    "title": "POKEMON OBSIDIAN FLAMES ELITE TRAINER KIT"
+    "title": "Pokémon TCG: Chaos Rising Booster Bundle"
   },
-  "Carta Magica:24178": {
+  "PokeBros:14917": {
     "hit": false,
-    "price": 84.99,
+    "price": 1020.0,
     "available": false,
-    "title": "POKEMON TEMPORAL FORCES ELITE TRAINER BOX"
+    "title": "Pokémon TCG: Prismatic Evolutions Premium Figure Collection (6x) SEALED CASE"
   },
-  "Carta Magica:51996": {
+  "PokeBros:14656": {
     "hit": false,
-    "price": 59.99,
+    "price": 49.0,
     "available": false,
-    "title": "POKEMON ARMAROUGE EX PREMIUM COLLECTION"
+    "title": "Pokémon TCG: Perfect Order Booster Bundle"
   },
-  "Pullz:266374": {
+  "PokeBros:14557": {
     "hit": false,
-    "price": 56.99,
-    "available": true,
-    "title": "Pokemon Mega Zygarde ex Premium Collection"
-  },
-  "Pullz:265518": {
-    "hit": true,
-    "price": 59.99,
-    "available": true,
-    "title": "Pokemon Chaos Rising Elite Trainer Box- GER"
-  },
-  "Pullz:262193": {
-    "hit": true,
-    "price": 40.99,
-    "available": true,
-    "title": "Pokemon Pikachu V-UNION Card Frame Collection Box"
-  },
-  "Pullz:257485": {
-    "hit": false,
-    "price": 499.0,
-    "available": true,
-    "title": "Pokemon Blastoise GX Premium Collection"
-  },
-  "Pullz:256623": {
-    "hit": false,
-    "price": 84.99,
-    "available": true,
-    "title": "Pokemon Perfect Order Elite Trainer Box"
-  },
-  "Pullz:255738": {
-    "hit": false,
-    "price": 179.99,
-    "available": true,
-    "title": "Pokemon Mega Charizard X ex Ultra-Premium Collection- GER"
-  },
-  "Pullz:251419": {
-    "hit": false,
-    "price": 500.0,
-    "available": true,
-    "title": "Fusion Strike Pokémon Center Elite Trainer Box"
-  },
-  "Pullz:251412": {
-    "hit": false,
-    "price": 230.0,
-    "available": true,
-    "title": "Astral Radiance Pokémon Center Elite Trainer Box"
-  },
-  "Pullz:250865": {
-    "hit": false,
-    "price": 134.99,
+    "price": 1000.0,
     "available": false,
-    "title": "Pokemon MEGA Dream ex Booster Box"
+    "title": "Pokémon TCG: Mega Charizard X ex Ultra-Premium Collection (Sealed Case = 4x)"
   },
-  "Pullz:249906": {
+  "PokeBros:14312": {
     "hit": false,
-    "price": 215.99,
+    "price": 100.0,
     "available": false,
-    "title": "Pokemon Journey Together Booster Box"
+    "title": "Pokémon TCG: Ascended Heroes Booster Bundle"
   },
-  "Pullz:249830": {
+  "PokeBros:14212": {
     "hit": false,
-    "price": 84.99,
+    "price": 80.0,
     "available": false,
-    "title": "Pokemon Phantasmal Flames Elite Trainer Box"
+    "title": "Pokémon TCG: Phantasmal Flames Booster Bundle"
   },
-  "Pullz:249826": {
+  "PokeBros:13552": {
     "hit": false,
-    "price": 69.99,
+    "price": 49.0,
     "available": false,
-    "title": "Pokemon Prismatic Evolutions Booster Bundle"
+    "title": "Pokémon TCG: Mega Venusaur ex Premium Collection"
   },
-  "Pullz:248716": {
+  "PokeBros:13389": {
     "hit": false,
-    "price": 220.99,
+    "price": 220.0,
     "available": false,
-    "title": "Pokemon Mega Charizard X ex Ultra-Premium Collection"
+    "title": "Pokémon TCG: Mega Charizard X ex Ultra-Premium Collection"
   },
-  "Pullz:248087": {
+  "PokeBros:13271": {
     "hit": false,
-    "price": 134.99,
-    "available": true,
-    "title": "Pokemon 151C: Collect 151 Gathering Booster Box"
-  },
-  "Pullz:245660": {
-    "hit": true,
-    "price": 32.99,
-    "available": true,
-    "title": "Pokémon Trick or Trade 2024 Booster Bundle"
-  },
-  "Pullz:241681": {
-    "hit": false,
-    "price": 48.99,
+    "price": 120.0,
     "available": false,
-    "title": "Pokemon Black Bolt Booster Bundle"
+    "title": "Pokémon TCG: Charizard ex Super-Premium Collection"
   },
-  "Pullz:241677": {
+  "PokeBros:13267": {
     "hit": false,
-    "price": 77.99,
+    "price": 400.0,
     "available": false,
-    "title": "Pokemon Black Bolt Elite Trainer Box"
+    "title": "Pokémon TCG: White Flare Booster Bundle Display (10x)"
   },
-  "Pullz:241668": {
+  "PokeBros:13263": {
     "hit": false,
-    "price": 48.99,
+    "price": 400.0,
     "available": false,
-    "title": "Pokemon White Flare Booster Bundle"
+    "title": "Pokémon TCG: Black Bolt Booster Bundle Display (10x)"
   },
-  "Pullz:240730": {
+  "PokeBros:12555": {
     "hit": false,
-    "price": 89.99,
+    "price": 75.0,
     "available": false,
-    "title": "Pokemon Surging Sparks ETB"
+    "title": "Pokémon TCG: White Flare Booster Bundle"
   },
-  "Pullz:240545": {
+  "PokeBros:12548": {
     "hit": false,
-    "price": 77.99,
+    "price": 85.0,
     "available": false,
-    "title": "Pokemon White Flare Elite Trainer Box"
+    "title": "Pokémon TCG: Black Bolt Booster Bundle"
   },
-  "Pullz:240228": {
+  "PokeBros:12039": {
     "hit": false,
-    "price": 199.99,
+    "price": 60.0,
     "available": false,
-    "title": "Pokemon Prismatic Evolutions Super Premium Collection"
+    "title": "Pokémon TCG: Prismatic Evolutions Booster Bundle"
   },
-  "Pullz:240224": {
+  "PokeBros:9074": {
     "hit": false,
-    "price": 79.99,
+    "price": 249.0,
     "available": false,
-    "title": "Pokemon Destined Rivals Elite Trainer Box"
-  },
-  "Pullz:239946": {
-    "hit": false,
-    "price": 64.99,
-    "available": false,
-    "title": "Pokemon Journey Together ETB"
-  },
-  "Pullz:239171": {
-    "hit": true,
-    "price": 51.99,
-    "available": true,
-    "title": "Pokemon Iono Bellibolt ex Premium Collection"
-  },
-  "Pullz:32547": {
-    "hit": false,
-    "price": 55.99,
-    "available": false,
-    "title": "Pokemon Astral Radiance Elite Trainer Box"
-  },
-  "Pullz:32400": {
-    "hit": false,
-    "price": 55.99,
-    "available": false,
-    "title": "Pokemon Stellar Crown Elite Trainer Box"
-  },
-  "Pullz:32395": {
-    "hit": true,
-    "price": 47.99,
-    "available": true,
-    "title": "Pokemon Ogerpon ex Premium Collection"
-  },
-  "Pullz:32384": {
-    "hit": false,
-    "price": 56.99,
-    "available": false,
-    "title": "Pokemon Scarlet &amp; Violet Koraidon Elite Trainer Box"
-  },
-  "Pullz:32383": {
-    "hit": false,
-    "price": 56.99,
-    "available": false,
-    "title": "Pokemon Scarlet &amp; Violet Miraidon Elite Trainer Box"
-  },
-  "Pullz:32378": {
-    "hit": false,
-    "price": 79.99,
-    "available": false,
-    "title": "Pokemon Charizard ex Super Premium Collection"
+    "title": "Pokémon TCG: Charizard Ultra-Premium Collection"
   }
 }
