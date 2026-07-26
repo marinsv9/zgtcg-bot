@@ -1033,9 +1033,9 @@
     "title": "Pokémon TCG: Prismatic Evolutions Premium Figure Collection (6x) SEALED CASE"
   },
   "PokeBros:14656": {
-    "hit": false,
-    "price": 49.0,
-    "available": false,
+    "hit": true,
+    "price": 50.0,
+    "available": true,
     "title": "Pokémon TCG: Perfect Order Booster Bundle"
   },
   "PokeBros:14557": {
@@ -1109,30 +1109,6 @@
     "price": 249.0,
     "available": false,
     "title": "Pokémon TCG: Charizard Ultra-Premium Collection"
-  },
-  "Carta Magica:15231": {
-    "hit": false,
-    "price": 59.99,
-    "available": false,
-    "title": "POKEMON PALDEAN FATES ELITE TRAINER BOX"
-  },
-  "Carta Magica:15346": {
-    "hit": false,
-    "price": 59.99,
-    "available": false,
-    "title": "POKEMON OBSIDIAN FLAMES ELITE TRAINER KIT"
-  },
-  "Carta Magica:24178": {
-    "hit": false,
-    "price": 84.99,
-    "available": false,
-    "title": "POKEMON TEMPORAL FORCES ELITE TRAINER BOX"
-  },
-  "Carta Magica:51996": {
-    "hit": false,
-    "price": 59.99,
-    "available": false,
-    "title": "POKEMON ARMAROUGE EX PREMIUM COLLECTION"
   },
   "Pullz:266374": {
     "hit": false,

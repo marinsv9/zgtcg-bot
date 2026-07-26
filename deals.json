@@ -1,7 +1,18 @@
 {
-  "updated": "2026-07-26T15:21:34.901054Z",
-  "count": 5,
+  "updated": "2026-07-26T16:29:02.641492Z",
+  "count": 6,
   "deals": [
+    {
+      "shop": "PokeBros",
+      "title": "Pokémon TCG: Perfect Order Booster Bundle",
+      "price": 50.0,
+      "url": "https://pokebros.com.hr/product/pokemon-tcg-perfect-order-booster-bundle/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Pok%C3%A9mon%20%3A%20Perfect%20Order%20Booster%20Bundle",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": false
+    },
     {
       "shop": "Pullz",
       "title": "Pokemon Chaos Rising Elite Trainer Box- GER",
