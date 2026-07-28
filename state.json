@@ -1907,5 +1907,17 @@
     "price": 43.0,
     "available": false,
     "title": "Pokémon TCG: Stellar Crown Elite Trainer Box (ETB)"
+  },
+  "Pullz:268360": {
+    "hit": false,
+    "price": 87.99,
+    "available": true,
+    "title": "Pokemon Pitch Black Elite Trainer Box"
+  },
+  "Pullz:268365": {
+    "hit": true,
+    "price": 46.99,
+    "available": true,
+    "title": "Pokemon Pitch Black Booster Bundle"
   }
 }
