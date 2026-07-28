@@ -1,18 +1,7 @@
 {
-  "updated": "2026-07-28T18:01:33.275705Z",
-  "count": 7,
+  "updated": "2026-07-28T19:47:17.869052Z",
+  "count": 6,
   "deals": [
-    {
-      "shop": "PokeBros",
-      "title": "Pokémon TCG: Perfect Order Booster Bundle",
-      "price": 50.0,
-      "url": "https://pokebros.com.hr/product/pokemon-tcg-perfect-order-booster-bundle/",
-      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Pok%C3%A9mon%20%3A%20Perfect%20Order%20Booster%20Bundle",
-      "range": "",
-      "margin": null,
-      "priority": false,
-      "is_new": false
-    },
     {
       "shop": "Pullz",
       "title": "Pokemon Pitch Black Booster Bundle",
