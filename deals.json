@@ -1,18 +1,7 @@
 {
-  "updated": "2026-07-29T09:23:55.709247Z",
-  "count": 6,
+  "updated": "2026-07-29T11:42:04.669597Z",
+  "count": 5,
   "deals": [
-    {
-      "shop": "PokeBros",
-      "title": "Pokémon TCG: Perfect Order Booster Bundle",
-      "price": 50.0,
-      "url": "https://pokebros.com.hr/product/pokemon-tcg-perfect-order-booster-bundle/",
-      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Pok%C3%A9mon%20%3A%20Perfect%20Order%20Booster%20Bundle",
-      "range": "",
-      "margin": null,
-      "priority": false,
-      "is_new": false
-    },
     {
       "shop": "Pullz",
       "title": "Pokemon Pitch Black Booster Bundle",
@@ -22,7 +11,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "shop": "Pullz",
@@ -33,7 +22,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "shop": "Pullz",
@@ -44,7 +33,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "shop": "Pullz",
@@ -55,7 +44,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "shop": "Pullz",
@@ -66,7 +55,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     }
   ]
 }
