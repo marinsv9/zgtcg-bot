@@ -647,7 +647,7 @@
     "available": false,
     "title": "MTG: Foundations - Collector Booster Box (12 packs)"
   },
-  "_shopify_last": "2026-07-30T13:12:39.594821",
+  "_shopify_last": "2026-07-31T10:21:40.238142",
   "Magic Omens:15780120232268:57639127122252": {
     "hit": false,
     "price": 144.0,
@@ -926,7 +926,7 @@
   },
   "PokeBros:16761": {
     "hit": false,
-    "price": 140.0,
+    "price": 150.0,
     "available": false,
     "title": "Pokémon TCG: 30th Celebration Ditto Premium Collection"
   },
@@ -1747,9 +1747,9 @@
     "title": "Pokemon Mega Zygarde ex Premium Collection"
   },
   "Pullz:265518": {
-    "hit": true,
+    "hit": false,
     "price": 59.99,
-    "available": true,
+    "available": false,
     "title": "Pokemon Chaos Rising Elite Trainer Box- GER"
   },
   "Pullz:262193": {

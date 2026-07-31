@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-31T07:44:18.330270Z",
-  "count": 5,
+  "updated": "2026-07-31T10:26:51.836430Z",
+  "count": 4,
   "deals": [
     {
       "shop": "Pullz",
@@ -11,18 +11,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
-    },
-    {
-      "shop": "Pullz",
-      "title": "Pokemon Chaos Rising Elite Trainer Box- GER",
-      "price": 59.99,
-      "url": "https://pullz.shop/shop/pokemon-chaos-rising-elite-trainer-box-ger/",
-      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Chaos%20Rising%20Elite%20Trainer%20Box-%20GER",
-      "range": "",
-      "margin": null,
-      "priority": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "shop": "Pullz",
@@ -33,7 +22,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "shop": "Pullz",
@@ -44,7 +33,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "shop": "Pullz",
@@ -55,7 +44,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     }
   ]
 }
