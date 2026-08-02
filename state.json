@@ -647,7 +647,7 @@
     "available": false,
     "title": "MTG: Foundations - Collector Booster Box (12 packs)"
   },
-  "_shopify_last": "2026-08-01T07:17:56.294746",
+  "_shopify_last": "2026-08-02T03:59:32.486108",
   "Magic Omens:15780120232268:57639127122252": {
     "hit": false,
     "price": 144.0,
@@ -1865,5 +1865,11 @@
     "price": 43.0,
     "available": false,
     "title": "Pokémon TCG: Stellar Crown Elite Trainer Box (ETB)"
+  },
+  "PokePower:10330406748489:54978948268361": {
+    "hit": false,
+    "price": 179.99,
+    "available": true,
+    "title": "Pokemon - Ascended Heroes Elite Trainer Box"
   }
 }
