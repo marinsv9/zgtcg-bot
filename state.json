@@ -1680,36 +1680,6 @@
     "available": false,
     "title": "Pokémon TCG: Stellar Crown Elite Trainer Box (ETB)"
   },
-  "Dabas:79110": {
-    "hit": false,
-    "price": 249.95,
-    "available": true,
-    "title": "Pokemon Mega Charizard X ex Ultra Premium Collection"
-  },
-  "Dabas:76928": {
-    "hit": false,
-    "price": 89.95,
-    "available": false,
-    "title": "Pokemon Mega Evolution Lucario Elite Trainer Box"
-  },
-  "Dabas:26114": {
-    "hit": false,
-    "price": 129.95,
-    "available": false,
-    "title": "Pokemon Sword &amp; Shield Charizard Ultra Premium Collection"
-  },
-  "Dabas:21887": {
-    "hit": false,
-    "price": 149.95,
-    "available": false,
-    "title": "Pokemon 151 Ultra Premium Collection"
-  },
-  "Dabas:21602": {
-    "hit": false,
-    "price": 54.95,
-    "available": false,
-    "title": "Pokemon 151 Elite Trainer Box"
-  },
   "Carta Magica:15231": {
     "hit": false,
     "price": 59.99,
@@ -1895,5 +1865,29 @@
     "price": 55.99,
     "available": false,
     "title": "Pokemon Astral Radiance Elite Trainer Box"
+  },
+  "Pullz:32400": {
+    "hit": false,
+    "price": 55.99,
+    "available": false,
+    "title": "Pokemon Stellar Crown Elite Trainer Box"
+  },
+  "Pullz:32395": {
+    "hit": true,
+    "price": 47.99,
+    "available": true,
+    "title": "Pokemon Ogerpon ex Premium Collection"
+  },
+  "Pullz:32383": {
+    "hit": false,
+    "price": 56.99,
+    "available": false,
+    "title": "Pokemon Scarlet &amp; Violet Miraidon Elite Trainer Box"
+  },
+  "Pullz:32378": {
+    "hit": false,
+    "price": 79.99,
+    "available": false,
+    "title": "Pokemon Charizard ex Super Premium Collection"
   }
 }

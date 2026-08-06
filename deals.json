@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-06T10:06:45.115728Z",
-  "count": 3,
+  "updated": "2026-08-06T12:18:22.892158Z",
+  "count": 4,
   "deals": [
     {
       "shop": "Pullz",
@@ -34,6 +34,17 @@
       "margin": null,
       "priority": false,
       "is_new": false
+    },
+    {
+      "shop": "Pullz",
+      "title": "Pokemon Ogerpon ex Premium Collection",
+      "price": 47.99,
+      "url": "https://pullz.shop/shop/pokemon-ogerpon-ex-premium-collection/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Ogerpon%20ex%20Premium%20Collection",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": true
     }
   ]
 }
