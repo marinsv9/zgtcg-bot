@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-07T17:33:03.961138Z",
-  "count": 4,
+  "updated": "2026-08-07T18:29:34.572985Z",
+  "count": 3,
   "deals": [
     {
       "shop": "Pullz",
@@ -11,7 +11,18 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
+    },
+    {
+      "shop": "Pullz",
+      "title": "Pokemon Pitch Black Booster Bundle",
+      "price": 46.99,
+      "url": "https://pullz.shop/shop/pokemon-pitch-black-booster-bundle/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Pitch%20Black%20Booster%20Bundle",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": false
     },
     {
       "shop": "Pullz",
@@ -22,29 +33,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
-    },
-    {
-      "shop": "Pullz",
-      "title": "Pokemon Iono Bellibolt ex Premium Collection",
-      "price": 51.99,
-      "url": "https://pullz.shop/shop/pokemon-iono-bellibolt-ex-premium-collection/",
-      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Iono%20Bellibolt%20ex%20Premium%20Collection",
-      "range": "",
-      "margin": null,
-      "priority": false,
-      "is_new": true
-    },
-    {
-      "shop": "Pullz",
-      "title": "Pokemon Ogerpon ex Premium Collection",
-      "price": 47.99,
-      "url": "https://pullz.shop/shop/pokemon-ogerpon-ex-premium-collection/",
-      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Ogerpon%20ex%20Premium%20Collection",
-      "range": "",
-      "margin": null,
-      "priority": false,
-      "is_new": true
+      "is_new": false
     }
   ]
 }
