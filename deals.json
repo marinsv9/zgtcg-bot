@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-11T07:52:40.537102Z",
-  "count": 4,
+  "updated": "2026-08-11T09:04:01.074909Z",
+  "count": 5,
   "deals": [
     {
       "shop": "PokeBros",
@@ -45,6 +45,17 @@
       "margin": null,
       "priority": false,
       "is_new": false
+    },
+    {
+      "shop": "Pullz",
+      "title": "Pokemon Iono Bellibolt ex Premium Collection",
+      "price": 51.99,
+      "url": "https://pullz.shop/shop/pokemon-iono-bellibolt-ex-premium-collection/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Iono%20Bellibolt%20ex%20Premium%20Collection",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": true
     }
   ]
 }
