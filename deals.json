@@ -1,18 +1,7 @@
 {
-  "updated": "2026-08-11T14:34:13.186319Z",
-  "count": 6,
+  "updated": "2026-08-11T15:37:00.755035Z",
+  "count": 5,
   "deals": [
-    {
-      "shop": "PokeBros",
-      "title": "Pokémon TCG: Perfect Order Booster Bundle",
-      "price": 50.0,
-      "url": "https://pokebros.com.hr/product/pokemon-tcg-perfect-order-booster-bundle/",
-      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Pok%C3%A9mon%20%3A%20Perfect%20Order%20Booster%20Bundle",
-      "range": "",
-      "margin": null,
-      "priority": false,
-      "is_new": false
-    },
     {
       "shop": "Pullz",
       "title": "Pokemon Pokemon Terapagos UPC Shatter holo energy set",
