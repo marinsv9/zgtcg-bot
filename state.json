@@ -1740,18 +1740,6 @@
     "available": false,
     "title": "POKEMON ARMAROUGE EX PREMIUM COLLECTION"
   },
-  "Pullz:265512": {
-    "hit": false,
-    "price": 79.99,
-    "available": false,
-    "title": "Pokemon Black Bolt Elite Trainer Box- GER"
-  },
-  "Pullz:265514": {
-    "hit": false,
-    "price": 79.99,
-    "available": false,
-    "title": "Pokemon White Flare Elite Trainer Box- GER"
-  },
   "Pullz:266195": {
     "hit": true,
     "price": 7.0,
@@ -1847,5 +1835,23 @@
     "price": 32.99,
     "available": false,
     "title": "Pokémon Trick or Trade 2024 Booster Bundle"
+  },
+  "Pullz:241681": {
+    "hit": false,
+    "price": 48.99,
+    "available": false,
+    "title": "Pokemon Black Bolt Booster Bundle"
+  },
+  "Pullz:241677": {
+    "hit": false,
+    "price": 77.99,
+    "available": false,
+    "title": "Pokemon Black Bolt Elite Trainer Box"
+  },
+  "Pullz:241668": {
+    "hit": false,
+    "price": 48.99,
+    "available": false,
+    "title": "Pokemon White Flare Booster Bundle"
   }
 }
