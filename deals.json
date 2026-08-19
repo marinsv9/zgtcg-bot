@@ -1,5 +1,50 @@
 {
-  "updated": "2026-08-19T00:31:01.193180Z",
-  "count": 0,
-  "deals": []
+  "updated": "2026-08-19T02:07:39.657862Z",
+  "count": 4,
+  "deals": [
+    {
+      "shop": "Pullz",
+      "title": "Pokemon Pokemon Terapagos UPC Shatter holo energy set",
+      "price": 7.0,
+      "url": "https://pullz.shop/shop/pokemon-pokemon-terapagos-upc-shatter-holo-energy-set/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Terapagos%20UPC%20Shatter%20holo%20energy%20set",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": true
+    },
+    {
+      "shop": "Pullz",
+      "title": "Pokemon CSV10C: Chasing Glory Together Booster Box- Slim",
+      "price": 40.99,
+      "url": "https://pullz.shop/shop/pokemon-csv10c-chasing-glory-together-booster-box-slim/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=CSV10C%3A%20Chasing%20Glory%20Together%20Booster%20Box-%20Slim",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": true
+    },
+    {
+      "shop": "Pullz",
+      "title": "Pokemon Pitch Black Booster Bundle",
+      "price": 46.99,
+      "url": "https://pullz.shop/shop/pokemon-pitch-black-booster-bundle/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Pitch%20Black%20Booster%20Bundle",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": true
+    },
+    {
+      "shop": "Pullz",
+      "title": "Pokemon Pikachu V-UNION Card Frame Collection Box",
+      "price": 40.99,
+      "url": "https://pullz.shop/shop/pokemon-pikachu-v-union-card-frame-collection-box/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Pikachu%20V-UNION%20Card%20Frame%20Collection%20Box",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": true
+    }
+  ]
 }
