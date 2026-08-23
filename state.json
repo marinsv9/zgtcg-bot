@@ -1691,5 +1691,77 @@
     "price": 54.95,
     "available": false,
     "title": "Pokemon 151 Elite Trainer Box"
+  },
+  "PokeBros:17101": {
+    "hit": false,
+    "price": 420.0,
+    "available": false,
+    "title": "Pokémon TCG: 151 Blooming Waters Premium Collection"
+  },
+  "PokeBros:16761": {
+    "hit": false,
+    "price": 150.0,
+    "available": false,
+    "title": "Pokémon TCG: 30th Celebration Ditto Premium Collection"
+  },
+  "PokeBros:15936": {
+    "hit": false,
+    "price": 50.0,
+    "available": false,
+    "title": "Pokémon TCG: Pitch Black Booster Bundle"
+  },
+  "PokeBros:15860": {
+    "hit": false,
+    "price": 55.0,
+    "available": false,
+    "title": "Pokémon TCG: Mega Greninja ex Premium Collection"
+  },
+  "PokeBros:15854": {
+    "hit": false,
+    "price": 60.0,
+    "available": false,
+    "title": "Pokémon TCG: Mega Zygarde ex Premium Collection"
+  },
+  "PokeBros:15611": {
+    "hit": false,
+    "price": 350.0,
+    "available": false,
+    "title": "Pokémon TCG: Ascended Heroes Deluxe Pin Collection Sealed Case (6x)"
+  },
+  "PokeBros:15271": {
+    "hit": false,
+    "price": 50.0,
+    "available": false,
+    "title": "Pokémon TCG: Chaos Rising Booster Bundle"
+  },
+  "PokeBros:14917": {
+    "hit": false,
+    "price": 1020.0,
+    "available": false,
+    "title": "Pokémon TCG: Prismatic Evolutions Premium Figure Collection (6x) SEALED CASE"
+  },
+  "PokeBros:14656": {
+    "hit": false,
+    "price": 50.0,
+    "available": false,
+    "title": "Pokémon TCG: Perfect Order Booster Bundle"
+  },
+  "PokeBros:14557": {
+    "hit": false,
+    "price": 1000.0,
+    "available": false,
+    "title": "Pokémon TCG: Mega Charizard X ex Ultra-Premium Collection (Sealed Case = 4x)"
+  },
+  "PokeBros:14312": {
+    "hit": false,
+    "price": 100.0,
+    "available": false,
+    "title": "Pokémon TCG: Ascended Heroes Booster Bundle"
+  },
+  "PokeBros:14212": {
+    "hit": false,
+    "price": 80.0,
+    "available": false,
+    "title": "Pokémon TCG: Phantasmal Flames Booster Bundle"
   }
 }
