@@ -1817,5 +1817,47 @@
     "price": 249.0,
     "available": false,
     "title": "Pokémon TCG: Charizard Ultra-Premium Collection"
+  },
+  "Pullz:249830": {
+    "hit": false,
+    "price": 84.99,
+    "available": false,
+    "title": "Pokemon Phantasmal Flames Elite Trainer Box"
+  },
+  "Pullz:248087": {
+    "hit": false,
+    "price": 134.99,
+    "available": true,
+    "title": "Pokemon 151C: Collect 151 Gathering Booster Box"
+  },
+  "Pullz:245660": {
+    "hit": false,
+    "price": 32.99,
+    "available": false,
+    "title": "Pokémon Trick or Trade 2024 Booster Bundle"
+  },
+  "Pullz:241681": {
+    "hit": false,
+    "price": 48.99,
+    "available": false,
+    "title": "Pokemon Black Bolt Booster Bundle"
+  },
+  "Pullz:241677": {
+    "hit": false,
+    "price": 77.99,
+    "available": false,
+    "title": "Pokemon Black Bolt Elite Trainer Box"
+  },
+  "Pullz:241668": {
+    "hit": false,
+    "price": 48.99,
+    "available": false,
+    "title": "Pokemon White Flare Booster Bundle"
+  },
+  "Pullz:240730": {
+    "hit": false,
+    "price": 89.99,
+    "available": false,
+    "title": "Pokemon Surging Sparks ETB"
   }
 }
