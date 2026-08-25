@@ -1679,5 +1679,161 @@
     "price": 249.0,
     "available": false,
     "title": "Pokémon TCG: Charizard Ultra-Premium Collection"
+  },
+  "Dabas:79110": {
+    "hit": false,
+    "price": 249.95,
+    "available": false,
+    "title": "Pokemon Mega Charizard X ex Ultra Premium Collection"
+  },
+  "Dabas:76928": {
+    "hit": false,
+    "price": 89.95,
+    "available": false,
+    "title": "Pokemon Mega Evolution Lucario Elite Trainer Box"
+  },
+  "Dabas:26114": {
+    "hit": false,
+    "price": 129.95,
+    "available": false,
+    "title": "Pokemon Sword &amp; Shield Charizard Ultra Premium Collection"
+  },
+  "Dabas:21887": {
+    "hit": false,
+    "price": 149.95,
+    "available": false,
+    "title": "Pokemon 151 Ultra Premium Collection"
+  },
+  "Dabas:21602": {
+    "hit": false,
+    "price": 54.95,
+    "available": false,
+    "title": "Pokemon 151 Elite Trainer Box"
+  },
+  "Carta Magica:15231": {
+    "hit": false,
+    "price": 59.99,
+    "available": false,
+    "title": "POKEMON PALDEAN FATES ELITE TRAINER BOX"
+  },
+  "Carta Magica:15346": {
+    "hit": false,
+    "price": 59.99,
+    "available": false,
+    "title": "POKEMON OBSIDIAN FLAMES ELITE TRAINER KIT"
+  },
+  "Carta Magica:24178": {
+    "hit": false,
+    "price": 84.99,
+    "available": false,
+    "title": "POKEMON TEMPORAL FORCES ELITE TRAINER BOX"
+  },
+  "Carta Magica:51996": {
+    "hit": false,
+    "price": 59.99,
+    "available": false,
+    "title": "POKEMON ARMAROUGE EX PREMIUM COLLECTION"
+  },
+  "Pullz:272413": {
+    "hit": false,
+    "price": 154.99,
+    "available": true,
+    "title": "Pokemon Storm Emeralda Booster Box"
+  },
+  "Pullz:263894": {
+    "hit": false,
+    "price": 330.0,
+    "available": true,
+    "title": "Pokemon Twilight Masquerade Booster Box- u akrilnoj zaštiti"
+  },
+  "Pullz:263921": {
+    "hit": false,
+    "price": 265.0,
+    "available": true,
+    "title": "Pokemon Temporal Forces Booster Box- u akrilnoj zaštiti"
+  },
+  "Pullz:266195": {
+    "hit": true,
+    "price": 7.0,
+    "available": true,
+    "title": "Pokemon Pokemon Terapagos UPC Shatter holo energy set"
+  },
+  "Pullz:269702": {
+    "hit": true,
+    "price": 40.99,
+    "available": true,
+    "title": "Pokemon CSV10C: Chasing Glory Together Booster Box- Slim"
+  },
+  "Pullz:268360": {
+    "hit": false,
+    "price": 87.99,
+    "available": true,
+    "title": "Pokemon Pitch Black Elite Trainer Box"
+  },
+  "Pullz:268365": {
+    "hit": true,
+    "price": 46.99,
+    "available": true,
+    "title": "Pokemon Pitch Black Booster Bundle"
+  },
+  "Pullz:266374": {
+    "hit": false,
+    "price": 56.99,
+    "available": true,
+    "title": "Pokemon Mega Zygarde ex Premium Collection"
+  },
+  "Pullz:262193": {
+    "hit": true,
+    "price": 40.99,
+    "available": true,
+    "title": "Pokemon Pikachu V-UNION Card Frame Collection Box"
+  },
+  "Pullz:257485": {
+    "hit": false,
+    "price": 499.0,
+    "available": true,
+    "title": "Pokemon Blastoise GX Premium Collection"
+  },
+  "Pullz:256623": {
+    "hit": false,
+    "price": 84.99,
+    "available": true,
+    "title": "Pokemon Perfect Order Elite Trainer Box"
+  },
+  "Pullz:255738": {
+    "hit": false,
+    "price": 179.99,
+    "available": true,
+    "title": "Pokemon Mega Charizard X ex Ultra-Premium Collection- GER"
+  },
+  "Pullz:251419": {
+    "hit": false,
+    "price": 500.0,
+    "available": true,
+    "title": "Fusion Strike Pokémon Center Elite Trainer Box"
+  },
+  "Pullz:251412": {
+    "hit": false,
+    "price": 230.0,
+    "available": true,
+    "title": "Astral Radiance Pokémon Center Elite Trainer Box"
+  },
+  "Pullz:250865": {
+    "hit": false,
+    "price": 134.99,
+    "available": true,
+    "title": "Pokemon MEGA Dream ex Booster Box"
+  },
+  "Pullz:249906": {
+    "hit": false,
+    "price": 215.99,
+    "available": false,
+    "title": "Pokemon Journey Together Booster Box"
+  },
+  "Pullz:249830": {
+    "hit": false,
+    "price": 84.99,
+    "available": false,
+    "title": "Pokemon Phantasmal Flames Elite Trainer Box"
   }
 }
