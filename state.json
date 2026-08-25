@@ -1794,42 +1794,6 @@
     "available": false,
     "title": "Pokemon Phantasmal Flames Elite Trainer Box"
   },
-  "Pullz:248087": {
-    "hit": false,
-    "price": 134.99,
-    "available": true,
-    "title": "Pokemon 151C: Collect 151 Gathering Booster Box"
-  },
-  "Pullz:245660": {
-    "hit": false,
-    "price": 32.99,
-    "available": false,
-    "title": "Pokémon Trick or Trade 2024 Booster Bundle"
-  },
-  "Pullz:241681": {
-    "hit": false,
-    "price": 48.99,
-    "available": false,
-    "title": "Pokemon Black Bolt Booster Bundle"
-  },
-  "Pullz:241677": {
-    "hit": false,
-    "price": 77.99,
-    "available": false,
-    "title": "Pokemon Black Bolt Elite Trainer Box"
-  },
-  "Pullz:241668": {
-    "hit": false,
-    "price": 48.99,
-    "available": false,
-    "title": "Pokemon White Flare Booster Bundle"
-  },
-  "Pullz:240730": {
-    "hit": false,
-    "price": 89.99,
-    "available": false,
-    "title": "Pokemon Surging Sparks ETB"
-  },
   "Dabas:79110": {
     "hit": false,
     "price": 249.95,
@@ -1859,5 +1823,17 @@
     "price": 54.95,
     "available": false,
     "title": "Pokemon 151 Elite Trainer Box"
+  },
+  "Pullz:263894": {
+    "hit": false,
+    "price": 330.0,
+    "available": true,
+    "title": "Pokemon Twilight Masquerade Booster Box- u akrilnoj zaštiti"
+  },
+  "Pullz:263921": {
+    "hit": false,
+    "price": 265.0,
+    "available": true,
+    "title": "Pokemon Temporal Forces Booster Box- u akrilnoj zaštiti"
   }
 }
