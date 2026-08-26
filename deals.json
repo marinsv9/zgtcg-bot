@@ -1,7 +1,18 @@
 {
-  "updated": "2026-08-26T13:32:22.616990Z",
-  "count": 4,
+  "updated": "2026-08-26T14:24:55.606560Z",
+  "count": 5,
   "deals": [
+    {
+      "shop": "Pullz",
+      "title": "Pokemon GER Pitch Black Elite Trainer Box",
+      "price": 64.99,
+      "url": "https://pullz.shop/shop/pokemon-ger-pitch-black-elite-trainer-box/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=GER%20Pitch%20Black%20Elite%20Trainer%20Box",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": true
+    },
     {
       "shop": "Pullz",
       "title": "Pokemon Pokemon Terapagos UPC Shatter holo energy set",
