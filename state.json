@@ -1841,5 +1841,17 @@
     "price": 134.99,
     "available": true,
     "title": "Pokemon 151C: Collect 151 Gathering Booster Box"
+  },
+  "Pullz:256445": {
+    "hit": false,
+    "price": 135.0,
+    "available": true,
+    "title": "Pokemon Surging Sparks Elite Trainer Box"
+  },
+  "Pullz:266060": {
+    "hit": false,
+    "price": 215.0,
+    "available": true,
+    "title": "Pokemon Brilliant Stars Elite Trainer Box"
   }
 }
