@@ -647,7 +647,7 @@
     "available": false,
     "title": "MTG: Foundations - Collector Booster Box (12 packs)"
   },
-  "_shopify_last": "2026-09-03T17:54:29.048718",
+  "_shopify_last": "2026-09-04T14:12:02.084771",
   "Magic Omens:15780120232268:57639127122252": {
     "hit": false,
     "price": 144.0,
@@ -905,12 +905,6 @@
     "price": 200.0,
     "available": false,
     "title": "Pokemon TCG Charizard Ultra-Premium Collection (UPC)"
-  },
-  "Magic Omens:7926896525557:43434252763381": {
-    "hit": false,
-    "price": 46.0,
-    "available": false,
-    "title": "Pokemon TCG Hisuian Zoroark Vstar Premium Collection"
   },
   "PokePower:10010928677193:53620427358537": {
     "hit": false,
@@ -1847,5 +1841,11 @@
     "price": 59.99,
     "available": false,
     "title": "POKEMON ARMAROUGE EX PREMIUM COLLECTION"
+  },
+  "Magic Omens:16060128428364:58657394950476": {
+    "hit": false,
+    "price": 100.0,
+    "available": true,
+    "title": "Naruto Mythos TCG: Shinobi Shiren - Booster Box"
   }
 }
