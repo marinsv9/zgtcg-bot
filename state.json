@@ -1628,8 +1628,8 @@
   },
   "PokeBros:13271": {
     "hit": false,
-    "price": 120.0,
-    "available": false,
+    "price": 125.0,
+    "available": true,
     "title": "Pokémon TCG: Charizard ex Super-Premium Collection"
   },
   "PokeBros:13267": {
