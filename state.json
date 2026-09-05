@@ -647,7 +647,7 @@
     "available": false,
     "title": "MTG: Foundations - Collector Booster Box (12 packs)"
   },
-  "_shopify_last": "2026-09-04T14:12:02.084771",
+  "_shopify_last": "2026-09-05T12:04:11.534207",
   "Magic Omens:15780120232268:57639127122252": {
     "hit": false,
     "price": 144.0,
@@ -1799,5 +1799,23 @@
     "price": 100.0,
     "available": true,
     "title": "Naruto Mythos TCG: Shinobi Shiren - Booster Box"
+  },
+  "Pullz:257485": {
+    "hit": false,
+    "price": 499.0,
+    "available": true,
+    "title": "Pokemon Blastoise GX Premium Collection"
+  },
+  "Pullz:256623": {
+    "hit": false,
+    "price": 84.99,
+    "available": true,
+    "title": "Pokemon Perfect Order Elite Trainer Box"
+  },
+  "Pullz:255738": {
+    "hit": false,
+    "price": 179.99,
+    "available": true,
+    "title": "Pokemon Mega Charizard X ex Ultra-Premium Collection- GER"
   }
 }
