@@ -1728,12 +1728,6 @@
     "available": false,
     "title": "POKEMON ARMAROUGE EX PREMIUM COLLECTION"
   },
-  "Pullz:256445": {
-    "hit": false,
-    "price": 135.0,
-    "available": false,
-    "title": "Pokemon Surging Sparks Elite Trainer Box"
-  },
   "Pullz:272441": {
     "hit": true,
     "price": 64.99,
@@ -1847,5 +1841,11 @@
     "price": 400.0,
     "available": false,
     "title": "Pokemon TCG: 151 - Booster Box (20 packs) JPN"
+  },
+  "Pullz:248087": {
+    "hit": false,
+    "price": 134.99,
+    "available": true,
+    "title": "Pokemon 151C: Collect 151 Gathering Booster Box"
   }
 }
