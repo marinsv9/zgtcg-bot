@@ -647,7 +647,7 @@
     "available": false,
     "title": "MTG: Foundations - Collector Booster Box (12 packs)"
   },
-  "_shopify_last": "2026-09-10T06:29:39.347344",
+  "_shopify_last": "2026-09-11T06:06:52.384358",
   "Magic Omens:15780120232268:57639127122252": {
     "hit": false,
     "price": 144.0,
@@ -1841,5 +1841,11 @@
     "price": 215.99,
     "available": false,
     "title": "Pokemon Journey Together Booster Box"
+  },
+  "Magic Omens:15650368422220:57065499230540": {
+    "hit": false,
+    "price": 400.0,
+    "available": false,
+    "title": "Pokemon TCG: 151 - Booster Box (20 packs) JPN"
   }
 }
