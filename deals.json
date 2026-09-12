@@ -1,13 +1,13 @@
 {
-  "updated": "2026-09-12T14:02:24.491127Z",
+  "updated": "2026-09-12T17:07:48.456091Z",
   "count": 5,
   "deals": [
     {
       "shop": "Pullz",
-      "title": "Pokemon GER Pitch Black Elite Trainer Box",
-      "price": 64.99,
-      "url": "https://pullz.shop/shop/pokemon-ger-pitch-black-elite-trainer-box/",
-      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=GER%20Pitch%20Black%20Elite%20Trainer%20Box",
+      "title": "Pokemon Pokemon Terapagos UPC Shatter holo energy set",
+      "price": 7.0,
+      "url": "https://pullz.shop/shop/pokemon-pokemon-terapagos-upc-shatter-holo-energy-set/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Terapagos%20UPC%20Shatter%20holo%20energy%20set",
       "range": "",
       "margin": null,
       "priority": false,
@@ -15,10 +15,10 @@
     },
     {
       "shop": "Pullz",
-      "title": "Pokemon Pokemon Terapagos UPC Shatter holo energy set",
-      "price": 7.0,
-      "url": "https://pullz.shop/shop/pokemon-pokemon-terapagos-upc-shatter-holo-energy-set/",
-      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Terapagos%20UPC%20Shatter%20holo%20energy%20set",
+      "title": "Pokemon GER Pitch Black Elite Trainer Box",
+      "price": 64.99,
+      "url": "https://pullz.shop/shop/pokemon-ger-pitch-black-elite-trainer-box/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=GER%20Pitch%20Black%20Elite%20Trainer%20Box",
       "range": "",
       "margin": null,
       "priority": false,
