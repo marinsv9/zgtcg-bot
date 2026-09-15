@@ -974,7 +974,7 @@
   },
   "Pullz:272413": {
     "hit": false,
-    "price": 149.99,
+    "price": 139.99,
     "available": true,
     "title": "Pokemon Storm Emeralda Booster Box"
   },
@@ -1385,5 +1385,11 @@
     "price": 200.0,
     "available": false,
     "title": "Pokemon TCG Charizard Ultra-Premium Collection (UPC)"
+  },
+  "Pullz:263931": {
+    "hit": false,
+    "price": 349.0,
+    "available": true,
+    "title": "Pokemon Mega Evolution Enhanced Booster Box- u akrilnoj zaštiti- oštećenje na foliji"
   }
 }
