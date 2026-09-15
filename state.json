@@ -974,8 +974,8 @@
   },
   "Pullz:272413": {
     "hit": false,
-    "price": 139.99,
-    "available": true,
+    "price": 130.0,
+    "available": false,
     "title": "Pokemon Storm Emeralda Booster Box"
   },
   "Pullz:263894": {
@@ -1391,5 +1391,11 @@
     "price": 349.0,
     "available": true,
     "title": "Pokemon Mega Evolution Enhanced Booster Box- u akrilnoj zaštiti- oštećenje na foliji"
+  },
+  "Pullz:256575": {
+    "hit": false,
+    "price": 174.99,
+    "available": false,
+    "title": "Pokemon Prismatic Evolutions Elite Trainer Box"
   }
 }
