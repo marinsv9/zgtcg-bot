@@ -1397,5 +1397,11 @@
     "price": 174.99,
     "available": false,
     "title": "Pokemon Prismatic Evolutions Elite Trainer Box"
+  },
+  "Pullz:275552": {
+    "hit": true,
+    "price": 34.99,
+    "available": true,
+    "title": "Pokemon CSV8C: Brilliant Fantasy Slim Booster Box"
   }
 }
