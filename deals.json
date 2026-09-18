@@ -1,5 +1,17 @@
 {
-  "updated": "2026-09-18T19:02:34.435993Z",
-  "count": 0,
-  "deals": []
+  "updated": "2026-09-18T21:41:14.805031Z",
+  "count": 1,
+  "deals": [
+    {
+      "shop": "Pullz",
+      "title": "Pokemon CSV8C: Brilliant Fantasy Slim Booster Box",
+      "price": 34.99,
+      "url": "https://pullz.shop/shop/pokemon-csv8c-brilliant-fantasy-slim-booster-box/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=CSV8C%3A%20Brilliant%20Fantasy%20Slim%20Booster%20Box",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": true
+    }
+  ]
 }
