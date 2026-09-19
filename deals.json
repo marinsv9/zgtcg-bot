@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-19T06:37:26.072495Z",
-  "count": 1,
+  "updated": "2026-09-19T11:33:36.639586Z",
+  "count": 2,
   "deals": [
     {
       "shop": "Pullz",
@@ -12,6 +12,17 @@
       "margin": null,
       "priority": false,
       "is_new": false
+    },
+    {
+      "shop": "Pullz",
+      "title": "Pokemon Pokemon Terapagos UPC Shatter holo energy set",
+      "price": 7.0,
+      "url": "https://pullz.shop/shop/pokemon-pokemon-terapagos-upc-shatter-holo-energy-set/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Terapagos%20UPC%20Shatter%20holo%20energy%20set",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": true
     }
   ]
 }
