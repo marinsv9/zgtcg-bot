@@ -143,7 +143,7 @@
     "available": false,
     "title": "MTG: Lorwyn Eclipsed - Collector Booster Box (12 packs)"
   },
-  "_shopify_last": "2026-09-21T13:20:22.122893",
+  "_shopify_last": "2026-09-22T11:50:17.074135",
   "Magic Omens:15780120232268:57639127122252": {
     "hit": false,
     "price": 144.0,
@@ -1319,5 +1319,65 @@
     "price": 7.0,
     "available": true,
     "title": "Pokemon Pokemon Terapagos UPC Shatter holo energy set"
+  },
+  "Magic Omens:8569844891980:46670316503372": {
+    "hit": false,
+    "price": 24.0,
+    "available": false,
+    "title": "Battle Spirits Saga BSS01 Dawn of History Booster Box (24 packs)"
+  },
+  "Magic Omens:8031641501941:43757604798709": {
+    "hit": false,
+    "price": 55.0,
+    "available": false,
+    "title": "Pokemon TCG Scarlet & Violet (SV1) Elite Trainer Box (ETB) (Koraidon (red))"
+  },
+  "Magic Omens:8031641501941:43757604765941": {
+    "hit": false,
+    "price": 55.0,
+    "available": false,
+    "title": "Pokemon TCG Scarlet & Violet (SV1) Elite Trainer Box (ETB) (Miraidon (purple))"
+  },
+  "Magic Omens:8027826979061:43726875066613": {
+    "hit": false,
+    "price": 160.0,
+    "available": false,
+    "title": "Pokemon TCG Scarlet & Violet (SV1) Booster Box (36 packs)"
+  },
+  "Magic Omens:7992303878389:43629664436469": {
+    "hit": false,
+    "price": 105.0,
+    "available": false,
+    "title": "DragonBall Super Card Game Zenkai Series Set 02 B19 Booster Display (24 Packs)"
+  },
+  "Magic Omens:7978183262453:43567042298101": {
+    "hit": false,
+    "price": 60.0,
+    "available": false,
+    "title": "Pokemon TCG Crown Zenith (CRZ) Elite Trainer Box (ETB)"
+  },
+  "Magic Omens:6149886148798:37813004337342": {
+    "hit": false,
+    "price": 46.5,
+    "available": false,
+    "title": "Pokemon TCG Darkness Ablaze (DAB) Elite Trainer Box (ETB)"
+  },
+  "Magic Omens:7959137976565:43525992481013": {
+    "hit": false,
+    "price": 40.0,
+    "available": false,
+    "title": "Pokemon TCG Origin Forme Dialga Vstar Premium Collection"
+  },
+  "Magic Omens:7959155966197:43526029902069": {
+    "hit": false,
+    "price": 40.0,
+    "available": false,
+    "title": "Pokemon TCG Origin Forme Palkia Vstar Premium Collection"
+  },
+  "Magic Omens:7931438334197:43451342651637": {
+    "hit": false,
+    "price": 200.0,
+    "available": false,
+    "title": "Pokemon TCG Charizard Ultra-Premium Collection (UPC)"
   }
 }
