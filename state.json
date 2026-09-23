@@ -1293,7 +1293,7 @@
   "Pullz:275839": {
     "hit": false,
     "price": 126.0,
-    "available": true,
+    "available": false,
     "title": "Pokemon Shining Fates Elite Trainer Box"
   },
   "Pullz:275552": {
@@ -1391,5 +1391,11 @@
     "price": 87.99,
     "available": true,
     "title": "Pokemon Chaos Rising Elite Trainer Box"
+  },
+  "Pullz:262423": {
+    "hit": false,
+    "price": 540.0,
+    "available": true,
+    "title": "Pokemon 151 Elite Trainer Box- u akrilu"
   }
 }
