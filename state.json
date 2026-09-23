@@ -143,7 +143,7 @@
     "available": false,
     "title": "MTG: Lorwyn Eclipsed - Collector Booster Box (12 packs)"
   },
-  "_shopify_last": "2026-09-22T11:50:17.074135",
+  "_shopify_last": "2026-09-23T11:16:13.342777",
   "Magic Omens:15780120232268:57639127122252": {
     "hit": false,
     "price": 144.0,
@@ -1379,5 +1379,17 @@
     "price": 200.0,
     "available": false,
     "title": "Pokemon TCG Charizard Ultra-Premium Collection (UPC)"
+  },
+  "Pullz:262755": {
+    "hit": false,
+    "price": 225.99,
+    "available": true,
+    "title": "Pokemon Chaos Rising Booster Box"
+  },
+  "Pullz:262757": {
+    "hit": false,
+    "price": 87.99,
+    "available": true,
+    "title": "Pokemon Chaos Rising Elite Trainer Box"
   }
 }
