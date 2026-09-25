@@ -143,7 +143,7 @@
     "available": false,
     "title": "MTG: Lorwyn Eclipsed - Collector Booster Box (12 packs)"
   },
-  "_shopify_last": "2026-09-24T10:30:05.420985",
+  "_shopify_last": "2026-09-25T11:45:50.915301",
   "Magic Omens:15780120232268:57639127122252": {
     "hit": false,
     "price": 144.0,
@@ -1290,12 +1290,6 @@
     "available": false,
     "title": "POKEMON ARMAROUGE EX PREMIUM COLLECTION"
   },
-  "Pullz:275839": {
-    "hit": false,
-    "price": 126.0,
-    "available": false,
-    "title": "Pokemon Shining Fates Elite Trainer Box"
-  },
   "Pullz:275552": {
     "hit": true,
     "price": 34.99,
@@ -1397,5 +1391,11 @@
     "price": 540.0,
     "available": true,
     "title": "Pokemon 151 Elite Trainer Box- u akrilu"
+  },
+  "Pullz:269932": {
+    "hit": false,
+    "price": 99.0,
+    "available": true,
+    "title": "Pokemon  Journey Together Elite Trainer Box"
   }
 }
