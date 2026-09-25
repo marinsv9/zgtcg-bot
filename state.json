@@ -1389,13 +1389,13 @@
   "Pullz:262423": {
     "hit": false,
     "price": 540.0,
-    "available": true,
+    "available": false,
     "title": "Pokemon 151 Elite Trainer Box- u akrilu"
   },
   "Pullz:269932": {
     "hit": false,
     "price": 99.0,
-    "available": true,
+    "available": false,
     "title": "Pokemon  Journey Together Elite Trainer Box"
   }
 }
