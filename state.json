@@ -819,7 +819,7 @@
   "PokeBros:13271": {
     "hit": false,
     "price": 125.0,
-    "available": true,
+    "available": false,
     "title": "Pokémon TCG: Charizard ex Super-Premium Collection"
   },
   "PokeBros:13267": {
@@ -1359,7 +1359,7 @@
   "Pullz:262755": {
     "hit": false,
     "price": 225.99,
-    "available": true,
+    "available": false,
     "title": "Pokemon Chaos Rising Booster Box"
   },
   "Pullz:262757": {
