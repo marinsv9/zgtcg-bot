@@ -1379,5 +1379,11 @@
     "price": 94.99,
     "available": false,
     "title": "Pokemon GER 30th Celebration Elite Trainer Box"
+  },
+  "Pullz:277522": {
+    "hit": false,
+    "price": 240.0,
+    "available": true,
+    "title": "Pokemon Journey Together Enhanced Booster Box"
   }
 }
