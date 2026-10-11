@@ -225,7 +225,7 @@
   "PokeBros:14312": {
     "hit": false,
     "price": 100.0,
-    "available": false,
+    "available": true,
     "title": "Pokémon TCG: Ascended Heroes Booster Bundle"
   },
   "PokeBros:14212": {
@@ -777,7 +777,7 @@
   "Pullz:262757": {
     "hit": false,
     "price": 87.99,
-    "available": true,
+    "available": false,
     "title": "Pokemon Chaos Rising Elite Trainer Box"
   },
   "Pullz:275552": {
