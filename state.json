@@ -9,7 +9,7 @@
   "PokeBros:16761": {
     "hit": false,
     "price": 129.0,
-    "available": false,
+    "available": true,
     "title": "Pokémon TCG: 30th Celebration Ditto Premium Collection PRE-ORDER"
   },
   "PokeBros:15936": {
@@ -287,5 +287,11 @@
     "price": 57.99,
     "available": true,
     "title": "Pokemon GER 30th Celebration Booster Bundle"
+  },
+  "PokeBros:17694": {
+    "hit": false,
+    "price": 660.0,
+    "available": true,
+    "title": "Pokémon TCG: 30th Celebration Ditto Premium Collection SEALED CASE (6x) PRE-ORDER"
   }
 }
