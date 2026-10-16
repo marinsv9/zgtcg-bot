@@ -222,12 +222,6 @@
     "available": true,
     "title": "Pokemon Journey Together Enhanced Booster Box"
   },
-  "Pullz:266195": {
-    "hit": true,
-    "price": 7.0,
-    "available": true,
-    "title": "Pokemon Pokemon Terapagos UPC Shatter holo energy set"
-  },
   "Dabas:116539": {
     "hit": false,
     "price": 133.95,
@@ -293,5 +287,17 @@
     "price": 660.0,
     "available": true,
     "title": "Pokémon TCG: 30th Celebration Ditto Premium Collection SEALED CASE (6x) PRE-ORDER"
+  },
+  "Pullz:279711": {
+    "hit": false,
+    "price": 380.99,
+    "available": true,
+    "title": "Pokemon Darkness Ablaze Booster Box"
+  },
+  "Pullz:279709": {
+    "hit": false,
+    "price": 189.99,
+    "available": true,
+    "title": "Pokemon Lost Origin Elite Trainer Box"
   }
 }
