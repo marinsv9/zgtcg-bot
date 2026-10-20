@@ -1,5 +1,5 @@
 {
-  "_shopify_last": "2026-10-19T17:22:36.863507",
+  "_shopify_last": "2026-10-20T15:12:34.855130",
   "PokeBros:17101": {
     "hit": false,
     "price": 420.0,
@@ -258,12 +258,6 @@
     "available": true,
     "title": "Pokemon Darkness Ablaze Booster Box"
   },
-  "Pullz:279709": {
-    "hit": false,
-    "price": 189.99,
-    "available": false,
-    "title": "Pokemon Lost Origin Elite Trainer Box"
-  },
   "Pullz:279154": {
     "hit": false,
     "price": 57.99,
@@ -299,5 +293,11 @@
     "price": 189.99,
     "available": true,
     "title": "Pokemon Rayquaza 25th Anniversary Premium Collection Box"
+  },
+  "Pullz:266195": {
+    "hit": true,
+    "price": 7.0,
+    "available": true,
+    "title": "Pokemon Pokemon Terapagos UPC Shatter holo energy set"
   }
 }
