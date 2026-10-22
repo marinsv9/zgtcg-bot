@@ -1,5 +1,5 @@
 {
-  "_shopify_last": "2026-10-21T15:52:33.337781",
+  "_shopify_last": "2026-10-22T12:23:51.577124",
   "PokeBros:17101": {
     "hit": false,
     "price": 420.0,
@@ -275,5 +275,41 @@
     "price": 54.95,
     "available": false,
     "title": "Pokemon 151 Elite Trainer Box"
+  },
+  "Carta Magica:15231": {
+    "hit": false,
+    "price": 59.99,
+    "available": false,
+    "title": "POKEMON PALDEAN FATES ELITE TRAINER BOX"
+  },
+  "Carta Magica:15346": {
+    "hit": false,
+    "price": 59.99,
+    "available": false,
+    "title": "POKEMON OBSIDIAN FLAMES ELITE TRAINER KIT"
+  },
+  "Carta Magica:24178": {
+    "hit": false,
+    "price": 84.99,
+    "available": false,
+    "title": "POKEMON TEMPORAL FORCES ELITE TRAINER BOX"
+  },
+  "Carta Magica:51996": {
+    "hit": false,
+    "price": 59.99,
+    "available": false,
+    "title": "POKEMON ARMAROUGE EX PREMIUM COLLECTION"
+  },
+  "Pullz:272413": {
+    "hit": false,
+    "price": 125.99,
+    "available": true,
+    "title": "Pokemon Storm Emeralda Booster Box"
+  },
+  "Pullz:269702": {
+    "hit": true,
+    "price": 40.99,
+    "available": true,
+    "title": "Pokemon CSV10C: Chasing Glory Together Booster Box- Slim"
   }
 }

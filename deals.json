@@ -1,7 +1,18 @@
 {
-  "updated": "2026-10-22T06:35:57.940519Z",
-  "count": 2,
+  "updated": "2026-10-22T12:25:35.946799Z",
+  "count": 3,
   "deals": [
+    {
+      "shop": "Pullz",
+      "title": "Pokemon CSV10C: Chasing Glory Together Booster Box- Slim",
+      "price": 40.99,
+      "url": "https://pullz.shop/shop/pokemon-csv10c-chasing-glory-together-booster-box-slim/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=CSV10C%3A%20Chasing%20Glory%20Together%20Booster%20Box-%20Slim",
+      "range": "",
+      "margin": null,
+      "priority": false,
+      "is_new": true
+    },
     {
       "shop": "Pullz",
       "title": "Pokemon CSV8C: Brilliant Fantasy Slim Booster Box",
