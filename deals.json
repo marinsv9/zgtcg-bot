@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22T12:25:35.946799Z",
+  "updated": "2026-10-22T17:31:53.474301Z",
   "count": 3,
   "deals": [
     {
@@ -11,7 +11,7 @@
       "range": "",
       "margin": null,
       "priority": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "shop": "Pullz",
