@@ -1,5 +1,5 @@
 {
-  "_shopify_last": "2026-10-22T12:23:51.577124",
+  "_shopify_last": "2026-10-23T12:47:12.741820",
   "PokeBros:17101": {
     "hit": false,
     "price": 420.0,
@@ -311,5 +311,11 @@
     "price": 7.0,
     "available": true,
     "title": "Pokemon Pokemon Terapagos UPC Shatter holo energy set"
+  },
+  "Pullz:281620": {
+    "hit": false,
+    "price": 154.99,
+    "available": true,
+    "title": "Pokemon Ascended Heroes Elite Trainer Box"
   }
 }
