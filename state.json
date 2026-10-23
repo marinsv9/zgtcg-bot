@@ -317,5 +317,17 @@
     "price": 144.99,
     "available": true,
     "title": "Pokemon 30th Celebration Elite Trainer Box"
+  },
+  "Pullz:279716": {
+    "hit": false,
+    "price": 105.99,
+    "available": false,
+    "title": "Pokemon Astral Radiance Elite Trainer Box"
+  },
+  "Pullz:277514": {
+    "hit": false,
+    "price": 169.99,
+    "available": true,
+    "title": "Pokemon Ascended Heroes Elite Trainer Box- u akrilu"
   }
 }
