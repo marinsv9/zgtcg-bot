@@ -306,16 +306,16 @@
     "available": true,
     "title": "Pokemon CSV10C: Chasing Glory Together Booster Box- Slim"
   },
-  "Pullz:266195": {
-    "hit": true,
-    "price": 7.0,
-    "available": true,
-    "title": "Pokemon Pokemon Terapagos UPC Shatter holo energy set"
-  },
   "Pullz:281620": {
     "hit": false,
     "price": 154.99,
     "available": true,
     "title": "Pokemon Ascended Heroes Elite Trainer Box"
+  },
+  "Pullz:278116": {
+    "hit": false,
+    "price": 144.99,
+    "available": true,
+    "title": "Pokemon 30th Celebration Elite Trainer Box"
   }
 }
