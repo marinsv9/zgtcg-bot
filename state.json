@@ -1,5 +1,5 @@
 {
-  "_shopify_last": "2026-10-23T12:47:12.741820",
+  "_shopify_last": "2026-10-24T12:00:36.442034",
   "PokeBros:17101": {
     "hit": false,
     "price": 420.0,
@@ -315,7 +315,7 @@
   "Pullz:278116": {
     "hit": false,
     "price": 144.99,
-    "available": true,
+    "available": false,
     "title": "Pokemon 30th Celebration Elite Trainer Box"
   },
   "Pullz:279716": {
