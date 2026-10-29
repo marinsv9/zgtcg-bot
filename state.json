@@ -1229,5 +1229,71 @@
     "price": 249.0,
     "available": false,
     "title": "Pokémon TCG: Charizard Ultra-Premium Collection"
+  },
+  "Pullz:281620": {
+    "hit": false,
+    "price": 154.99,
+    "available": true,
+    "title": "Pokemon Ascended Heroes Elite Trainer Box"
+  },
+  "Pullz:272413": {
+    "hit": false,
+    "price": 125.99,
+    "available": true,
+    "title": "Pokemon Storm Emeralda Booster Box"
+  },
+  "Pullz:269702": {
+    "hit": true,
+    "price": 40.99,
+    "available": true,
+    "title": "Pokemon CSV10C: Chasing Glory Together Booster Box- Slim"
+  },
+  "Pullz:279711": {
+    "hit": false,
+    "price": 380.99,
+    "available": true,
+    "title": "Pokemon Darkness Ablaze Booster Box"
+  },
+  "Pullz:279154": {
+    "hit": false,
+    "price": 57.99,
+    "available": true,
+    "title": "Pokemon GER 30th Celebration Booster Bundle"
+  },
+  "Pullz:277514": {
+    "hit": false,
+    "price": 169.99,
+    "available": true,
+    "title": "Pokemon Ascended Heroes Elite Trainer Box- u akrilu"
+  },
+  "Pullz:277522": {
+    "hit": false,
+    "price": 240.0,
+    "available": true,
+    "title": "Pokemon Journey Together Enhanced Booster Box"
+  },
+  "Pullz:262757": {
+    "hit": false,
+    "price": 87.99,
+    "available": false,
+    "title": "Pokemon Chaos Rising Elite Trainer Box"
+  },
+  "Pullz:275552": {
+    "hit": true,
+    "price": 34.99,
+    "available": true,
+    "title": "Pokemon CSV8C: Brilliant Fantasy Slim Booster Box"
+  },
+  "Pullz:263931": {
+    "hit": false,
+    "price": 349.0,
+    "available": true,
+    "title": "Pokemon Mega Evolution Enhanced Booster Box- u akrilnoj zaštiti- oštećenje na foliji"
+  },
+  "Pullz:275470": {
+    "hit": false,
+    "price": 189.99,
+    "available": true,
+    "title": "Pokemon Rayquaza 25th Anniversary Premium Collection Box"
   }
 }
