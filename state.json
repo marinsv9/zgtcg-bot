@@ -1,5 +1,5 @@
 {
-  "_shopify_last": "2026-11-05T14:54:01.465225",
+  "_shopify_last": "2026-11-06T16:15:45.152583",
   "PokeBros:17694": {
     "hit": false,
     "price": 660.0,
@@ -216,40 +216,10 @@
     "available": true,
     "title": "Pokemon CSV8C: Brilliant Fantasy Slim Booster Box"
   },
-  "Pullz:263931": {
-    "hit": false,
-    "price": 349.0,
-    "available": false,
-    "title": "Pokemon Mega Evolution Enhanced Booster Box- u akrilnoj zaštiti- oštećenje na foliji"
-  },
   "Pullz:275470": {
     "hit": false,
     "price": 189.99,
     "available": true,
     "title": "Pokemon Rayquaza 25th Anniversary Premium Collection Box"
-  },
-  "Carta Magica:15231": {
-    "hit": false,
-    "price": 59.99,
-    "available": false,
-    "title": "POKEMON PALDEAN FATES ELITE TRAINER BOX"
-  },
-  "Carta Magica:15346": {
-    "hit": false,
-    "price": 59.99,
-    "available": false,
-    "title": "POKEMON OBSIDIAN FLAMES ELITE TRAINER KIT"
-  },
-  "Carta Magica:24178": {
-    "hit": false,
-    "price": 84.99,
-    "available": false,
-    "title": "POKEMON TEMPORAL FORCES ELITE TRAINER BOX"
-  },
-  "Carta Magica:51996": {
-    "hit": false,
-    "price": 59.99,
-    "available": false,
-    "title": "POKEMON ARMAROUGE EX PREMIUM COLLECTION"
   }
 }
