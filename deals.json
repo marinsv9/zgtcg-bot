@@ -1,7 +1,18 @@
 {
-  "updated": "2026-11-13T10:50:01.500037Z",
-  "count": 2,
+  "updated": "2026-11-13T18:14:16.327533Z",
+  "count": 3,
   "deals": [
+    {
+      "shop": "Pullz",
+      "title": "Pokemon Charizard ex Super- Premium Collection promo set",
+      "price": 6.0,
+      "url": "https://pullz.shop/shop/pokemon-charizard-ex-super-premium-collection-promo-set/",
+      "cardmarket": "https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=Charizard%20ex%20Super-%20Premium%20Collection%20promo%20set",
+      "range": "",
+      "margin": null,
+      "priority": true,
+      "is_new": true
+    },
     {
       "shop": "Pullz",
       "title": "Pokemon CSV10C: Chasing Glory Together Booster Box- Slim",

@@ -1,5 +1,5 @@
 {
-  "_shopify_last": "2026-11-12T17:07:44.579980",
+  "_shopify_last": "2026-11-13T18:13:10.787137",
   "Dabas:116539": {
     "hit": false,
     "price": 133.95,
@@ -227,5 +227,23 @@
     "price": 105.99,
     "available": true,
     "title": "Pokemon Vivid Voltage Elite Trainer Box"
+  },
+  "Pullz:285149": {
+    "hit": true,
+    "price": 6.0,
+    "available": true,
+    "title": "Pokemon Charizard ex Super- Premium Collection promo set"
+  },
+  "Pullz:285068": {
+    "hit": false,
+    "price": 94.99,
+    "available": true,
+    "title": "Pokemon Darkness Ablaze Elite Trainer Box"
+  },
+  "Pullz:285067": {
+    "hit": false,
+    "price": 124.99,
+    "available": true,
+    "title": "Pokemon Shining Fates Elite Trainer Box"
   }
 }
