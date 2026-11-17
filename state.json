@@ -1,5 +1,5 @@
 {
-  "_shopify_last": "2026-11-16T16:30:31.792310",
+  "_shopify_last": "2026-11-17T17:47:37.400879",
   "Dabas:116539": {
     "hit": false,
     "price": 133.95,
@@ -263,5 +263,17 @@
     "price": 54.0,
     "available": false,
     "title": "Pokemon: Paldean Fates Elite Trainer Box"
+  },
+  "Pullz:285783": {
+    "hit": false,
+    "price": 86.99,
+    "available": true,
+    "title": "Pokemon Delta Reign Elite Trainer Box"
+  },
+  "Pullz:285786": {
+    "hit": false,
+    "price": 224.99,
+    "available": true,
+    "title": "Pokemon Delta Reign Booster Box"
   }
 }
