@@ -245,5 +245,47 @@
     "price": 124.99,
     "available": true,
     "title": "Pokemon Shining Fates Elite Trainer Box"
+  },
+  "Carta Magica:15231": {
+    "hit": false,
+    "price": 59.99,
+    "available": false,
+    "title": "POKEMON PALDEAN FATES ELITE TRAINER BOX"
+  },
+  "Carta Magica:15346": {
+    "hit": false,
+    "price": 59.99,
+    "available": false,
+    "title": "POKEMON OBSIDIAN FLAMES ELITE TRAINER KIT"
+  },
+  "Carta Magica:24178": {
+    "hit": false,
+    "price": 84.99,
+    "available": false,
+    "title": "POKEMON TEMPORAL FORCES ELITE TRAINER BOX"
+  },
+  "Carta Magica:51996": {
+    "hit": false,
+    "price": 59.99,
+    "available": false,
+    "title": "POKEMON ARMAROUGE EX PREMIUM COLLECTION"
+  },
+  "Svarog:33362": {
+    "hit": false,
+    "price": 50.0,
+    "available": false,
+    "title": "Pokemon: Mega Venusaur ex Premium Collection"
+  },
+  "Svarog:32595": {
+    "hit": false,
+    "price": 80.0,
+    "available": false,
+    "title": "Pokemon: Mega Evolution Elite Trainer Box"
+  },
+  "Svarog:20340": {
+    "hit": false,
+    "price": 54.0,
+    "available": false,
+    "title": "Pokemon: Paldean Fates Elite Trainer Box"
   }
 }
