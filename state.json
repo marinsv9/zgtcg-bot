@@ -1,89 +1,5 @@
 {
   "_shopify_last": "2026-11-18T16:36:23.331131",
-  "Dabas:116539": {
-    "hit": false,
-    "price": 133.95,
-    "available": true,
-    "title": "Pokemon Charizard ex Super-Premium Collection"
-  },
-  "Dabas:76928": {
-    "hit": false,
-    "price": 89.95,
-    "available": false,
-    "title": "Pokemon Mega Evolution Lucario Elite Trainer Box"
-  },
-  "Dabas:26114": {
-    "hit": false,
-    "price": 129.95,
-    "available": false,
-    "title": "Pokemon Sword &amp; Shield Charizard Ultra Premium Collection"
-  },
-  "Dabas:21887": {
-    "hit": false,
-    "price": 149.95,
-    "available": false,
-    "title": "Pokemon 151 Ultra Premium Collection"
-  },
-  "Dabas:21602": {
-    "hit": false,
-    "price": 54.95,
-    "available": false,
-    "title": "Pokemon 151 Elite Trainer Box"
-  },
-  "Pullz:281620": {
-    "hit": false,
-    "price": 154.99,
-    "available": true,
-    "title": "Pokemon Ascended Heroes Elite Trainer Box"
-  },
-  "Pullz:272413": {
-    "hit": false,
-    "price": 125.99,
-    "available": true,
-    "title": "Pokemon Storm Emeralda Booster Box"
-  },
-  "Pullz:269702": {
-    "hit": true,
-    "price": 40.99,
-    "available": true,
-    "title": "Pokemon CSV10C: Chasing Glory Together Booster Box- Slim"
-  },
-  "Pullz:279711": {
-    "hit": false,
-    "price": 380.99,
-    "available": true,
-    "title": "Pokemon Darkness Ablaze Booster Box"
-  },
-  "Pullz:279154": {
-    "hit": false,
-    "price": 57.99,
-    "available": true,
-    "title": "Pokemon GER 30th Celebration Booster Bundle"
-  },
-  "Pullz:277514": {
-    "hit": false,
-    "price": 169.99,
-    "available": true,
-    "title": "Pokemon Ascended Heroes Elite Trainer Box- u akrilu"
-  },
-  "Pullz:262757": {
-    "hit": false,
-    "price": 87.99,
-    "available": false,
-    "title": "Pokemon Chaos Rising Elite Trainer Box"
-  },
-  "Pullz:275552": {
-    "hit": true,
-    "price": 34.99,
-    "available": true,
-    "title": "Pokemon CSV8C: Brilliant Fantasy Slim Booster Box"
-  },
-  "Pullz:275470": {
-    "hit": false,
-    "price": 189.99,
-    "available": true,
-    "title": "Pokemon Rayquaza 25th Anniversary Premium Collection Box"
-  },
   "PokeBros:17694": {
     "hit": false,
     "price": 660.0,
@@ -216,18 +132,6 @@
     "available": false,
     "title": "Pokémon TCG: Charizard Ultra-Premium Collection"
   },
-  "Pullz:285066": {
-    "hit": false,
-    "price": 105.99,
-    "available": true,
-    "title": "Pokemon Vivid Voltage Elite Trainer Box"
-  },
-  "Pullz:285067": {
-    "hit": false,
-    "price": 124.99,
-    "available": true,
-    "title": "Pokemon Shining Fates Elite Trainer Box"
-  },
   "Svarog:33362": {
     "hit": false,
     "price": 50.0,
@@ -245,17 +149,5 @@
     "price": 54.0,
     "available": false,
     "title": "Pokemon: Paldean Fates Elite Trainer Box"
-  },
-  "Pullz:285783": {
-    "hit": false,
-    "price": 86.99,
-    "available": true,
-    "title": "Pokemon Delta Reign Elite Trainer Box"
-  },
-  "Pullz:285786": {
-    "hit": false,
-    "price": 224.99,
-    "available": true,
-    "title": "Pokemon Delta Reign Booster Box"
   }
 }
