@@ -15,7 +15,7 @@
   "PokeBros:16761": {
     "hit": false,
     "price": 120.0,
-    "available": false,
+    "available": true,
     "title": "Pokémon TCG: 30th Celebration Ditto Premium Collection"
   },
   "PokeBros:15936": {
@@ -257,5 +257,17 @@
     "price": 189.99,
     "available": true,
     "title": "Pokemon Rayquaza 25th Anniversary Premium Collection Box"
+  },
+  "Pullz:285868": {
+    "hit": false,
+    "price": 399.0,
+    "available": true,
+    "title": "Pokemon 30th Celebration: Umbreon ex Ultra-Premium Collection"
+  },
+  "Pullz:285870": {
+    "hit": false,
+    "price": 399.0,
+    "available": true,
+    "title": "Pokemon 30th Celebration: Espeon  ex Ultra-Premium Collection"
   }
 }
