@@ -1,5 +1,5 @@
 {
-  "_shopify_last": "2026-11-22T08:40:20.237845",
+  "_shopify_last": "2026-11-23T11:21:27.904031",
   "PokeBros:17694": {
     "hit": false,
     "price": 660.0,
@@ -15,7 +15,7 @@
   "PokeBros:16761": {
     "hit": false,
     "price": 120.0,
-    "available": true,
+    "available": false,
     "title": "Pokémon TCG: 30th Celebration Ditto Premium Collection"
   },
   "PokeBros:15936": {
@@ -191,12 +191,6 @@
     "price": 224.99,
     "available": true,
     "title": "Pokemon Delta Reign Booster Box"
-  },
-  "Pullz:285067": {
-    "hit": false,
-    "price": 124.99,
-    "available": false,
-    "title": "Pokemon Shining Fates Elite Trainer Box"
   },
   "Pullz:285066": {
     "hit": false,
